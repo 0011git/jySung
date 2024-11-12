@@ -1,0 +1,64 @@
+{
+    "skills": [
+        {
+            "logos": [{"src":"/icons/skills/html.svg", "alt":"html logo"}],
+            "names": ["HTML"],
+            "description": ["웹 표준을 지키기 위해 노력합니다.", "반응형 웹 제작 경험이 있습니다."]
+        },
+        {
+            "logos": [{"src":"/icons/skills/css.svg", "alt":"css logo"}, {"src":"/icons/skills/sass.svg", "alt":"sass logo"}],
+            "names": ["CSS", "SCSS"],
+            "description": ["CSS, SCSS 문법에 익숙합니다.", "@mixin을 이용해 스타일을 캡슐화한 경험이 있습니다."]
+        },
+        {
+            "logos": [{"src":"/icons/skills/javascript.svg", "alt":"javascript logo"}],
+            "names": ["Javascript"],
+            "description": ["ES6 자바스크립트 문법을 사용합니다.", "바닐라 자바스크립트로 소셜 로그인을 구현한 경험이 있습니다."]
+        },
+        {
+            "logos": [{"src":"/icons/skills/react.svg", "alt":"react logo"}],
+            "names": ["React"],
+            "description": ["개인 프로젝트로 영화 사이트를 제작했습니다.", "중복되는 요소들을 컴포넌트화 할 수 있습니다."]
+        },
+        {
+            "logos": [{"src":"/icons/skills/nextjs.svg", "alt":"nextjs logo"}],
+            "names": ["Next.js"],
+            "description": ["팀 프로젝트로 PWA를 제작한 경험이 있습니다.", "기획 단계에서 Postman으로 API 요청값을 분석하고 문서화한 경험이 있습니다."]
+        },
+        {
+            "logos": [{"src":"/icons/skills/vue.svg", "alt":"vue logo"}],
+            "names": ["Vue.js"],
+            "description": ["개인 프로젝트로 모바일 뉴스 사이트를 제작했습니다.", "Vuex로 전역 상태 관리를 한 경험이 있습니다."]
+        },
+        {
+            "logos": [{"src":"/icons/skills/express.svg", "alt":"express logo"}],
+            "names": ["Express"],
+            "description": ["React, Vue.js 프로젝트 진행 시 Express로 서버를 구축해 API 요청을 해본 경험이 있습니다."]
+        },
+        {
+            "logos": [{"src":"/icons/skills/vercel.svg", "alt":"vercel  logo"}],
+            "names": ["Vercel"],
+            "description": ["깃 버전 관리 프로젝트를 Vercel로 배포한 경험이 있습니다."]
+        },
+        {
+            "logos": [{"src":"/icons/skills/zustand.svg", "alt":"zustand logo"}],
+            "names": ["Zustand"],
+            "description": ["React, Next.js에서 Zustand를 이용해 전역상태관리를 한 경험이 있습니다."]
+        },   
+        {
+            "logos": [{"src":"/icons/skills/mongodb.svg", "alt":"mongodb logo"}],
+            "names": ["MongoDB"],
+            "description": ["데이터 로드, 저장, 수정, 삭제 기능이 있는 To Do List를 제작했습니다."]
+        },
+        {
+            "logos": [{"src":"/icons/skills/figma.svg", "alt":"figma logo"}],
+            "names": ["Figma"],
+            "description": ["Figma로 팀원들과 공동 작업한 경험이 있습니다.", "반응형 웹을 디자인한 경험이 있습니다."]
+        },
+        {
+            "logos": [{"src":"/icons/skills/typescript.svg", "alt":"typescript logo"}],
+            "names": ["Typescript"],
+            "description": ["개인 포트폴리오 사이트를 타입스크립트를 적용해 제작했습니다."]
+        }     
+    ]
+}

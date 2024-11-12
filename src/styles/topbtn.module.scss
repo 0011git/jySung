@@ -1,0 +1,26 @@
+.topBtnWrap{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 5%;
+    right: 5%;
+    overflow: hidden;
+    button{
+        width: inherit;
+        height: inherit;
+        position: relative;
+        border: 1px solid #111111;
+        border-radius: 100px;
+        background-color: #F7F8FA;
+        &::after{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: '';
+            background: url('../../public/icons/arrow_up.svg') center no-repeat;
+        }
+    }
+}

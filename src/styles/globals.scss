@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Gothic&display=swap');
+
+body{
+    header{
+        width: 100%;
+        margin: 0 auto;
+        position: fixed;
+        background-color: rgba($color: #F7F8FA, $alpha:0.5);
+        z-index: 99;
+    }
+    main{
+        max-width: inherit;
+        width: 100%;
+    }
+    footer{
+        width: 100%;
+        background-color: #CBC6C3;
+    }
+}
