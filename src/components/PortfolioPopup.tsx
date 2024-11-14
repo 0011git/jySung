@@ -6,9 +6,9 @@ const PortfolioPopup = () => {
     <div className={popupStyle.PortfolioPopupWrap}>
         <div className={popupStyle.infoWrap}>
             <span className={popupStyle.closeBtnWrap}><button></button></span>
-            <span className={popupStyle.work}>팀 프로젝트</span>
-            <h2 className={popupStyle.title}>Seoul, W</h2>
-            <span className={popupStyle.when}>2024.01.01 ~ 2024.01.31</span>
+            <span className={popupStyle.work}>개인 프로젝트</span>
+            <h2 className={popupStyle.title}>World News 월드 뉴스</h2>
+            <span className={popupStyle.when}>2024.01.01 ~ 2024.01.31 (18일)</span>
             <ul className={popupStyle.links}>
                 <li className={`${popupStyle.github} ${popupStyle.linkCommon}`}>
                     <a href='#'>https://0011git.adfadfadf.adfadf</a>
@@ -36,17 +36,22 @@ const PortfolioPopup = () => {
 
         <div className={popupStyle.descriptionWrap}>
             <p className={popupStyle.summary}>
-            이전 페이지의 내용을 약간 변경한 사이트 한 줄 요약/설명 입니다.
+                {/* summary2 */}
+                기존의 노후화된 '다온 펜션' 사이트를 리뉴얼 했습니다.
             </p>
             <p className={`${popupStyle.detail1} ${popupStyle.detailcommon}`}>
-                리드미의 요약 부분을 줄글로 작성합니다. 
-                주제, 목표, 핵심 기능, 주요 기술 스택, 기간, 개발 인원과 내가 맡은 역할을 작성합니다. 모든 내용은 2~3줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 line-height는 180%입니다.
+                {/* description[0] */}
+                다온 펜션 리뉴얼은 저의 첫 팀 프로젝트입니다. 전반적으로 노후화된 기존의 사이트를 리뉴얼해 사용자 경험을 개선하고 만족도를 향상시키는 것을 목표로 했습니다. 개발 환경은 HTML, SCSS, 바닐라 자바스크립트 입니다. 5명의 팀원이 86일간 작업했습니다.
             </p>
             <p className={`${popupStyle.detail2} ${popupStyle.detailcommon}`}>
-                리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~5줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다. 리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다.  리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다. 리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 줄간격은 180%로 합니다.
+                {/* description[1] */}
+                리뉴얼 사이트 선정, 타겟층 선정, 페르소나 설정, 유스 케이스 및 플로우 차트 작성, 벤치마킹, 자사 장단점 분석 및 차별화 전략 수립, 정보 설계, 계획 수립, 계획서 작성 및 발표, 스토리보드 작성, 리디자인, 마크업, 기능 추가, 반응형 작업, 최종 발표 및 시연, 구현 보고서 작성 순서로 진행했습니다. 저는 리소스 수집과 1차 발표를 담당했고 페이지는 주변 소개와 로그인 관련 페이지를 작업했으며 해당 페이지에서 사용하는 기능을 함께 구현했습니다. 주요 구현 기능은 동적 인터페이스와 로그인 기능입니다.
             </p>
             <p className={`${popupStyle.detail3} ${popupStyle.detailcommon}`}>
-            마무리 부분은 2~4줄 이내로 작성하도록 합니다. github  리드미에 더 자세한 설명이 있는 경우 어떤 내용이 추가적으로 있는지와 함께 (ex. 기획서 링크, 피그마 디자인, 폴더 구조 등) 해당 링크로 유도하는 멘트를 추가합니다. 폰트 크기는 16px이며 줄간격은 180%로 합니다.
+                {/* description[2] */}
+                다른 프로젝트에 비해 긴 기간 동안 체계적으로 진행되었기 때문에 프로젝트의 시작부터 종료까지 전체 프로세스에 대해 세세하게 배울 수 있었습니다. 또한 SNS 로그인 및 회원가입을 바닐라 자바스크립트로 구현하며 프론트에서의 로그인 프로세스를 공부하고 이해하는 기회가 되었습니다.
+                <br />
+                보다 자세한 설명은 상단 GitHub 링크의 README를 통해 확인하실 수 있습니다.
             </p>
         </div>
 
