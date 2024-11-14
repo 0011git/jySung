@@ -37,41 +37,48 @@
             }
             .personalInfo{
                 ul{
+                    display: flex;
                     li{
-                        p{
-                            display: flex;
-                            align-items: center;
-                            &::before{
-                                width: 20px;
-                                height: 20px;
-                                margin-right: 16px;
-                                display: block;
-                                content: '';
-                                background-position: center;
-                                background-repeat: no-repeat;
+                        width: 50%;
+                        .itemWrap{
+                            &:not(:last-of-type){
+                                margin-bottom: 36px;
                             }
-                        }
-                        .name{
-                            &::before{
-                                background-image: url('../../public/icons/person.svg');
+                            p{
+                                display: flex;
+                                align-items: center;
+                                &::before{
+                                    width: 20px;
+                                    height: 20px;
+                                    margin-right: 16px;
+                                    display: block;
+                                    content: '';
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                }
                             }
-                        }
-                        .birth{
-                            &::before{
-                                background-image: url('../../public/icons/calender.svg');
+                            .name{
+                                &::before{
+                                    background-image: url('../../public/icons/person.svg');
+                                }
                             }
-                        }
-                        .contact{
-                            &::before{
-                                background-image: url('../../public/icons/mail.svg');
+                            .birth{
+                                &::before{
+                                    background-image: url('../../public/icons/calender.svg');
+                                }
                             }
-                        }
-                        .channel{
-                            &::before{
-                                background-image: url('../../public/icons/github.svg');
+                            .email{
+                                &::before{
+                                    background-image: url('../../public/icons/mail.svg');
+                                }
                             }
-                            .github {
-                                text-decoration: underline;
+                            .channel{
+                                &::before{
+                                    background-image: url('../../public/icons/github.svg');
+                                }
+                                .github {
+                                    text-decoration: underline;
+                                }
                             }
                         }
                     }
@@ -108,11 +115,10 @@
         width: 100%;
         height: 100vh;
         background-color: #101F5A;
-        position: relative;
         .greeting{
-            position: absolute;
-            top: 25%;
-            left: 25%;
+            max-width: 960px;
+            padding-top: 200px;
+            margin: 0 auto;
             p{
                 color: #F7F8FA;
                 font-size: 64px;
@@ -144,7 +150,72 @@
         }
     }
     // 3. 포트폴리오
-    .portfolio{}
+    .portfolio{
+        .portfolioBtnGroup{
+            margin-bottom: 120px;
+            display: flex;
+            .btnWrap{
+                &:not(:last-of-type) {
+                    margin-right: 16px;
+                }
+                button{
+                    min-width: 160px;
+                    padding: 8px 48px;                
+                    font-weight: 700;
+                    border: 1px solid #111111;
+                    border-radius: 100px;
+                    
+                }
+            }
+        }
+
+        .portfolioCommon {
+            &:not(:last-of-type){
+                margin-bottom: 240px;
+            }
+            .portfolioTitleWrap{
+                margin: 0 0 52px 20px;
+                .portfolioTitle{
+                    margin-right: 24px;
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+                .portfolioSubtitle{
+                    color: #CBC6C3;
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+            // 제목 아래 카드들 감싸는 클래스
+            .portfolioCardsGroup{
+            }
+        }
+        // 팀 프로젝트
+        .teamWrap{
+            .teamContents{
+                
+            }
+        }
+        // 개인 프로젝트
+        .soloWrap{
+            .soloContents{
+                .bigWrap{
+
+                }
+                .smallWrap{
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        .pCardWrap{
+                            width: 50%;
+                            gap: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     // 4. 기타 경험
     .others{}
 }

@@ -1,7 +1,9 @@
-import mainStyle from "../styles/main.module.scss";
+import mainStyle from "@/styles/main.module.scss";
 import { SkillType } from '../type/types'
 import skillsData from '../data/skills.json'
 import SkillCard from "@/components/SkillCard";
+import PortfolioCard from "@/components/PortfolioCard";
+import PortfolioPopup from "@/components/PortfolioPopup";
 
 export default function Home() {
 
@@ -36,24 +38,28 @@ export default function Home() {
         <div className={mainStyle.profileContents}>
           <div className={`${mainStyle.personalInfo} ${mainStyle.subContentsCommon}`}>
             <ul>
-              <li>
-                <h3 className={mainStyle.itemTitle}>name</h3>
-                <p className={mainStyle.name}>성주영(Jooyoung Sung)</p>
-              </li>
-              <li>
-                <h3 className={mainStyle.itemTitle}>birth</h3>
-                <p className={mainStyle.birth}>1993.01.25 (만 {age}세)</p>
+              <li className={mainStyle.info}>
+                <div className={mainStyle.itemWrap}>
+                  <h3 className={mainStyle.itemTitle}>name</h3>
+                  <p className={mainStyle.name}>성주영(Jooyoung Sung)</p>
+                </div>
+                <div className={mainStyle.itemWrap}>
+                  <h3 className={mainStyle.itemTitle}>birth</h3>
+                  <p className={mainStyle.birth}>1993.01.25 (만 {age}세)</p>
+                </div>
               </li>
               
-              <li>
-                <h3 className={mainStyle.itemTitle}>contact</h3>
-                <p className={mainStyle.contact}>0125sjy@gmail.com</p>
-              </li>
-              <li>
-                <h3 className={mainStyle.itemTitle}>channel</h3>
-                <p className={mainStyle.channel}>
-                  <a className={mainStyle.github} href="https://github.com/0011git">https://github.com/0011git</a>
-                </p>
+              <li className={mainStyle.contact}>
+                <div className={mainStyle.itemWrap}>
+                  <h3 className={mainStyle.itemTitle}>contact</h3>
+                  <p className={mainStyle.email}>0125sjy@gmail.com</p>
+                </div>
+                <div className={mainStyle.itemWrap}>
+                  <h3 className={mainStyle.itemTitle}>channel</h3>
+                  <p className={mainStyle.channel}>
+                    <a className={mainStyle.github} href="https://github.com/0011git">https://github.com/0011git</a>
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
@@ -66,7 +72,6 @@ export default function Home() {
 코드에 비즈니스적 가치를 녹여내기 위해 한 일???????</p>
             <p>정말 가치 있는 것은 함께 일할 때 가장 잘 만들어낼 수 있다고 생각합니다. 
 팀플하면서 가치를 창출한 경험????</p>
-            <p>개발 전반의 공유 문화에 공감하며 이에 기여하기 위해 개발 과정을 문서화하고 이를 공유합니다.</p>
           </div>
 
           <div className={`${mainStyle.education} ${mainStyle.subContentsCommon}`}>
@@ -101,8 +106,8 @@ export default function Home() {
         <ul className={mainStyle.skillCardsWrap}>
           {
             skillsArr.map((item: SkillType, idx: number) => (
-              <li className={mainStyle.cardWrap}>
-                <SkillCard item={item} key={idx} />
+              <li className={mainStyle.cardWrap} key={idx}>
+                <SkillCard item={item} />
               </li>
             ))
           }
@@ -115,29 +120,46 @@ export default function Home() {
           <strong className={mainStyle.sectionTitle}>portfolio</strong>
           <em className={mainStyle.sectionSubtitle}>포트폴리오</em>
         </h2>
-        <div>
-          <button type="button">Team</button>
-          <button type="button">Solo</button>
+        <div className={mainStyle.portfolioBtnGroup}>
+          <div className={mainStyle.btnWrap}><button type="button">Team</button></div>
+          <div className={mainStyle.btnWrap}><button type="button">Solo</button></div>
         </div>
 
-        <div>
-          <h3>
-            <strong>Team Projects</strong>
-            <em>팀 프로젝트</em>
+        <div className={`${mainStyle.portfolioCommon} ${mainStyle.teamWrap}`}>
+          <h3 className={mainStyle.portfolioTitleWrap}>
+            <strong className={mainStyle.portfolioTitle}>Team Projects</strong>
+            <em className={mainStyle.portfolioSubtitle}>팀 프로젝트</em>
           </h3>
-          <div>
+          <ul className={`${mainStyle.teamContents} ${mainStyle.portfolioCardsGroup}`} >
             {/* 큰카드컴포2 */}
-          </div>
+            <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+            <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+          </ul>
         </div>
 
-        <div>
-        <h3>
-            <strong className={mainStyle.sectionTitle}>Solo Projects</strong>
-            <em className={mainStyle.sectionSubtitle}>개인 프로젝트</em>
-            <div>
-
-            </div>
+        <div className={`${mainStyle.portfolioCommon} ${mainStyle.soloWrap}`}>
+          <h3 className={mainStyle.portfolioTitleWrap}>
+            <strong className={mainStyle.portfolioTitle}>Solo Projects</strong>
+            <em className={mainStyle.portfolioSubtitle}>개인 프로젝트</em>
           </h3>
+          <ul className={`${mainStyle.soloContents} ${mainStyle.portfolioCardsGroup}`}>
+            {/* {카드컴포2+4} */}
+            <li className={mainStyle.bigWrap}>
+              <ul>
+                <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+                <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+              </ul>
+            </li>
+
+            <li className={mainStyle.smallWrap}>
+              <ul>
+                <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+                <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+                <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+                <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+              </ul>
+            </li>
+          </ul>
         </div>
 
       </section>
@@ -148,6 +170,7 @@ export default function Home() {
           <strong className={mainStyle.sectionTitle}>other experiences</strong>
           <em className={mainStyle.sectionSubtitle}>기타 경험</em>
         </h2>
+        <PortfolioPopup />
 
       </section>
     </div>

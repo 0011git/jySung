@@ -7,7 +7,7 @@ import { LogoType, SkillType } from '../type/types'
 // item
 
 const SkillCard = ({item}:{item:SkillType}) => {
-    console.log(item);
+    // console.log(item);
 
     
   return (

@@ -1,0 +1,33 @@
+.portfolioCardWrap{
+    .thumbnailWrap{
+        background-color: #ACBCD3;
+        img{
+        }
+    }
+    .descriptionWrap{
+        padding: 36px 40px;
+        .title{
+            font-size: 36px;
+            font-weight: 700;
+        }
+        .when{
+            margin-bottom: 16px;
+            display: block;
+            color: #CBC6C3;
+        }
+        .usedSkillsWrap{
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .skill{
+                &:not(:last-of-type) {
+                    margin-right: 8px;
+                }
+            }
+        }
+        .summary{}
+
+    }
+    
+}
