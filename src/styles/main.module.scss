@@ -152,7 +152,7 @@
     // 3. 포트폴리오
     .portfolio{
         .portfolioBtnGroup{
-            margin-bottom: 120px;
+            margin-bottom: 160px;
             display: flex;
             .btnWrap{
                 &:not(:last-of-type) {
@@ -193,7 +193,11 @@
         // 팀 프로젝트
         .teamWrap{
             .teamContents{
-                
+                .pCardWrap{
+                    &:not(:last-of-type) {
+                        margin-bottom: 100px;
+                    }
+                }
             }
         }
         // 개인 프로젝트

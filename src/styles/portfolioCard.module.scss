@@ -1,7 +1,11 @@
 .portfolioCardWrap{
+    cursor: pointer;
     .thumbnailWrap{
-        background-color: #ACBCD3;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: #CBC6C3;
         img{
+            object-fit: cover;
         }
     }
     .descriptionWrap{

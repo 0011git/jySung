@@ -9,3 +9,28 @@ export interface SkillType {
   names: string[]; // 기술 이름 배열
   description: string[]; // 기술 설명 배열
 }
+
+interface PeopleType {
+  name: string,
+  role: string
+}
+
+export interface PortfolioItemType {
+  type: string,
+  thumbnail: string,
+  title: string,
+  subtitle: string,
+  date: string[],
+  people: PeopleType[],
+  techs: string[] ,
+  summary: string[],
+  github: string,
+  link: string,
+  description: string[],
+  video: string,
+  screenshot: string[]
+}
+
+// export interface popupProps {
+//   popupItem: PortfolioItemType | null;
+// }

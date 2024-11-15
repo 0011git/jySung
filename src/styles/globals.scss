@@ -9,6 +9,11 @@ body{
         position: fixed;
         background-color: rgba($color: #F7F8FA, $alpha:0.5);
         z-index: 99;
+        // transition: 0.3s;
+        // transform: translateY(0%);
+        // &.hide{
+        //     transform: translateY(-100%);
+        // }
     }
     main{
         max-width: inherit;
@@ -18,4 +23,11 @@ body{
         width: 100%;
         background-color: #CBC6C3;
     }
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+
 }

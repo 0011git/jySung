@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "../styles/globals.scss";
-import Header from "../components/Header";
-import TopBtn from "../components/TopBtn";
-import Footer from "../components/Footer";
-
+import Header from "@/components/Header";
+import TopBtn from "@/components/TopBtn";
+import Footer from "@/components/Footer";
+// import hideOnScrollDown from '@/utils/hideOnScrollDown'
 
 export const metadata: Metadata = {
   title: "JY Sung's Portfolio",
@@ -16,10 +16,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  // const hide = hideOnScrollDown();
+
   return (
     <html lang="en">
       <body>
-        <header>
+        <header> {/* className={hide ? 'hide' : ''}> */} 
           <Header />  
         </header>
 

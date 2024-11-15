@@ -1,11 +1,20 @@
+"use client"
+
 import mainStyle from "@/styles/main.module.scss";
-import { SkillType } from '../type/types'
+import { PortfolioItemType, SkillType } from '../type/types'
 import skillsData from '../data/skills.json'
 import SkillCard from "@/components/SkillCard";
 import PortfolioCard from "@/components/PortfolioCard";
 import PortfolioPopup from "@/components/PortfolioPopup";
+import portfolioData from '@/data/portfolio.json';
+import { useState } from "react";
+
+
 
 export default function Home() {
+  const [popupItem, setPopupItem] = useState<PortfolioItemType>(portfolioData.team[0]);
+  const [isClicked, setIsClicked] = useState(false);
+
 
   const getAge = (): number => {
     const today = new Date();
@@ -111,7 +120,7 @@ export default function Home() {
         <ul className={mainStyle.skillCardsWrap}>
           {
             skillsArr.map((item: SkillType, idx: number) => (
-              <li className={mainStyle.cardWrap} key={idx}>
+              <li className={mainStyle.cardWrap} key={item.names[0]}>
                 <SkillCard item={item} />
               </li>
             ))
@@ -137,8 +146,13 @@ export default function Home() {
           </h3>
           <ul className={`${mainStyle.teamContents} ${mainStyle.portfolioCardsGroup}`} >
             {/* 큰카드컴포2 */}
-            <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
-            <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+            {
+              portfolioData.team.map((item)=> (
+                <li className={mainStyle.pCardWrap} key={item.title}>
+                  <PortfolioCard item={item} setPopupItem={setPopupItem}  setIsClicked={setIsClicked} />
+                </li>
+              ))
+            }
           </ul>
         </div>
 
@@ -151,17 +165,17 @@ export default function Home() {
             {/* {카드컴포2+4} */}
             <li className={mainStyle.bigWrap}>
               <ul>
-                <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
-                <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+                {/* <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+                <li className={mainStyle.pCardWrap}><PortfolioCard /></li> */}
               </ul>
             </li>
 
             <li className={mainStyle.smallWrap}>
               <ul>
+                {/* <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
                 <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
                 <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
-                <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
-                <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
+                <li className={mainStyle.pCardWrap}><PortfolioCard /></li> */}
               </ul>
             </li>
           </ul>
@@ -175,9 +189,12 @@ export default function Home() {
           <strong className={mainStyle.sectionTitle}>other experiences</strong>
           <em className={mainStyle.sectionSubtitle}>기타 경험</em>
         </h2>
-        <PortfolioPopup />
 
       </section>
+
+      <div className={ isClicked ? 'show' : 'hide'}>
+        <PortfolioPopup popupItem={popupItem} setIsClicked={setIsClicked} />
+      </div>
     </div>
   );
 }
