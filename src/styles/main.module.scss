@@ -1,4 +1,8 @@
 .mainStyle {
+    &.stopScroll{
+        // height: 100%;
+        overflow: hidden;
+    }
     section{
         &:not(:first-of-type){
             max-width: 960px;
@@ -27,7 +31,7 @@
         .profileContents{
             .subContentsCommon{
                 &:not(:last-of-type){
-                    margin-bottom: 100px;
+                    margin-bottom: 80px;
                 }
                 .itemTitle{
                     font-size: 20px;
@@ -100,7 +104,7 @@
                         align-items: center;
                         p{
                             width: 33%;
-                            text-align: center;
+                            // text-align: center;
                         }
                         &:not(:last-of-type){
                             margin-bottom: 24px;
@@ -114,9 +118,14 @@
     .visual{
         width: 100%;
         height: 100vh;
+        margin-bottom: 40px;
         background-color: #101F5A;
+        display: flex;
+        flex-direction: column;
         .greeting{
+            width: 100%;
             max-width: 960px;
+            height: 80%;
             padding-top: 200px;
             margin: 0 auto;
             p{
@@ -127,6 +136,50 @@
                     margin-bottom: 72px;
                 }
             }
+        }
+        .mouseWrap{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;          
+            .mouse {
+                width: 44px;
+                height: 80px;
+                border: 3px solid #F7F8FA;
+                border-radius: 60px;
+                position: relative;
+            
+                &::before {
+                    width: 10px;
+                    height: 10px;
+                    content: '';
+                    position: absolute;
+                    top: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #F7F8FA;
+                    border-radius: 50%;
+                    opacity: 1;
+                    animation: wheel 2s infinite;
+                    -webkit-animation: wheel 2s infinite;
+                }
+            }
+              
+              
+              @keyframes wheel {
+                to {
+                  opacity: 0;
+                  top: 54px;
+                }
+              }
+              
+              @-webkit-keyframes wheel {
+                to {
+                  opacity: 0;
+                  top: 54px;
+                }
+              }
         }
     }
 

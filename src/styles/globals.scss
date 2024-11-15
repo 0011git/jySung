@@ -18,16 +18,31 @@ body{
     main{
         max-width: inherit;
         width: 100%;
+        
     }
     footer{
         width: 100%;
         background-color: #CBC6C3;
     }
+    .logo{
+        &::after{
+            width: 50px;
+            height: 80px;
+            display: block;
+            content: '';
+            background: url('../../public/icons/logo.svg') center no-repeat;
+        }
+    }
+
     .hide{
         display: none;
     }
     .show{
         display: block;
+    }
+    .stopScroll{
+        height: 100%;
+        overflow: hidden;
     }
 
 }

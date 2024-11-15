@@ -15,7 +15,6 @@ export default function Home() {
   const [popupItem, setPopupItem] = useState<PortfolioItemType>(portfolioData.team[0]);
   const [isClicked, setIsClicked] = useState(false);
 
-
   const getAge = (): number => {
     const today = new Date();
     const todayYYYY: number = today.getFullYear();
@@ -24,11 +23,11 @@ export default function Home() {
     return age;
   }
   const age: number = getAge();
-  
+
   const skillsArr: SkillType[] = skillsData.skills;
 
   return (
-    <div className={mainStyle.mainStyle}>
+    <div className={`${mainStyle.mainStyle} ${isClicked ? 'stopScroll' : ''}`}>
       {/* 0. Visual */}
       <section className={mainStyle.visual}>
         <div className={mainStyle.greeting}>
@@ -36,8 +35,10 @@ export default function Home() {
           <p>프론트엔드 개발자</p>
           <p>성주영입니다.</p>
         </div>
+        <div className={mainStyle.mouseWrap}>
+            <div className={mainStyle.mouse}></div>
+        </div>
       </section>
-
       {/* 1. 프로필 */}
       <section className={mainStyle.profile}>
         <h2 className={mainStyle.sectionTitleWrap}>
@@ -57,7 +58,7 @@ export default function Home() {
                   <p className={mainStyle.birth}>1993.01.25 (만 {age}세)</p>
                 </div>
               </li>
-              
+      
               <li className={mainStyle.contact}>
                 <div className={mainStyle.itemWrap}>
                   <h3 className={mainStyle.itemTitle}>contact</h3>
@@ -72,7 +73,6 @@ export default function Home() {
               </li>
             </ul>
           </div>
-
           <div className={`${mainStyle.introduce} ${mainStyle.subContentsCommon}`}>
             <h3 className={mainStyle.itemTitle}>introduce</h3>
             <p>
@@ -87,7 +87,6 @@ export default function Home() {
               문제를 찾아 해결하고, 나아가 비즈니스적 가치를 창출하는 것이 개발자의 핵심 역량이라고 생각합니다. 단기적 문제 해결에 집중하기보다는, 근본 원인을 파악하고 상황을 넓은 시각에서 분석한 후 해결 방안을 세우기 위해 노력합니다. 또한 비즈니스에서 가장 중요한 기한 엄수를 위해 계획을 세우고 주기적으로 중간 점검을 진행해 목표를 체계적으로 달성할 수 있도록 합니다.
             </p>
           </div>
-
           <div className={`${mainStyle.education} ${mainStyle.subContentsCommon}`}>
             <h3 className={mainStyle.itemTitle}>education</h3>
             <ul>
@@ -110,7 +109,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* 2. 기술 */}
       <section className={mainStyle.skills}>
         <h2 className={mainStyle.sectionTitleWrap}>
@@ -127,7 +125,6 @@ export default function Home() {
           }
         </ul>
       </section>
-
       {/* 3. 포트폴리오 */}
       <section className={mainStyle.portfolio}>
         <h2 className={mainStyle.sectionTitleWrap}>
@@ -138,7 +135,6 @@ export default function Home() {
           <div className={mainStyle.btnWrap}><button type="button">Team</button></div>
           <div className={mainStyle.btnWrap}><button type="button">Solo</button></div>
         </div>
-
         <div className={`${mainStyle.portfolioCommon} ${mainStyle.teamWrap}`}>
           <h3 className={mainStyle.portfolioTitleWrap}>
             <strong className={mainStyle.portfolioTitle}>Team Projects</strong>
@@ -155,7 +151,6 @@ export default function Home() {
             }
           </ul>
         </div>
-
         <div className={`${mainStyle.portfolioCommon} ${mainStyle.soloWrap}`}>
           <h3 className={mainStyle.portfolioTitleWrap}>
             <strong className={mainStyle.portfolioTitle}>Solo Projects</strong>
@@ -169,7 +164,6 @@ export default function Home() {
                 <li className={mainStyle.pCardWrap}><PortfolioCard /></li> */}
               </ul>
             </li>
-
             <li className={mainStyle.smallWrap}>
               <ul>
                 {/* <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
@@ -180,17 +174,15 @@ export default function Home() {
             </li>
           </ul>
         </div>
-
       </section>
-
       {/* 4. 기타 경험 */}
       <section className={mainStyle.others}>
         <h2 className={mainStyle.sectionTitleWrap}>
           <strong className={mainStyle.sectionTitle}>other experiences</strong>
           <em className={mainStyle.sectionSubtitle}>기타 경험</em>
         </h2>
-
       </section>
+      
 
       <div className={ isClicked ? 'show' : 'hide'}>
         <PortfolioPopup popupItem={popupItem} setIsClicked={setIsClicked} />

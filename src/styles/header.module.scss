@@ -7,15 +7,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    .linkLogo{
+        z-index: 1000;
+    }
     nav{
         ul{
             display: flex;
             li{
+                padding: 0 16px;
                 font-weight: 700;
+                cursor: pointer;
                 text-transform: capitalize;
                 &:not(:last-of-type){
-                    margin-right: 100px;
+                    margin-right: 80px;
                 }
             
             }
