@@ -1,11 +1,14 @@
 import React from 'react'
 import portfolioCardStyle from '@/styles/portfolioCard.module.scss'
-import portfolio from '@/data/portfolio.json'
 import { PortfolioItemType } from '../type/types'
 
+interface PortfolioCardProps {
+  item: PortfolioItemType; // PortfolioItemType 타입을 갖는 item
+  setPopupItem: React.Dispatch<React.SetStateAction<PortfolioItemType> >; // setPopupItem은 PortfolioItemType 또는 null을 받을 수 있는 함수
+  setIsClicked: React.Dispatch<React.SetStateAction<boolean>>; // setIsClicked는 boolean 타입을 상태로 다루는 함수
+}
 
-
-const PortfolioCard = ({item, setPopupItem, setIsClicked}:{item:PortfolioItemType, setPopupItem:any, setIsClicked:any}) => {
+const PortfolioCard: React.FC<PortfolioCardProps> = ({item, setPopupItem, setIsClicked}) => {
   return (
     <figure className={portfolioCardStyle.portfolioCardWrap} onClick={() => {setPopupItem(item); setIsClicked(true);}}>
         <div className={portfolioCardStyle.thumbnailWrap}>
@@ -17,7 +20,7 @@ const PortfolioCard = ({item, setPopupItem, setIsClicked}:{item:PortfolioItemTyp
             <ul className={portfolioCardStyle.usedSkillsWrap}>
               {
                 item.techs.map((tech) => {
-                  return <li className={portfolioCardStyle.skill}>
+                  return <li className={portfolioCardStyle.skill} key={tech}>
                   <img src={tech} />
                 </li>
                 })

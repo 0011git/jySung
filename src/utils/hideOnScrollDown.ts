@@ -1,23 +1,23 @@
-"use client"
+// "use client"
 
-import React from 'react'
-import { useState } from "react";
+// import React from 'react'
+// import { useState } from "react";
 
-const [hide, setHide] = useState(false);
-let lastScrollY = 0;
+// const [hide, setHide] = useState(false);
+// let lastScrollY = 0;
 
-export const hideOnScrollDown = () => {
-    const scrollY = window.scrollY;
-    if (scrollY > lastScrollY) {
-        setHide(true);
-        console.log('스크롤다운');
-    } else {
-        setHide(false);
-        console.log('스크롤업');
+// export const hideOnScrollDown = () => {
+//     const scrollY = window.scrollY;
+//     if (scrollY > lastScrollY) {
+//         setHide(true);
+//         console.log('스크롤다운');
+//     } else {
+//         setHide(false);
+//         console.log('스크롤업');
         
-    }
-    lastScrollY = scrollY;    
-    return hide;    
-}
+//     }
+//     lastScrollY = scrollY;    
+//     return hide;    
+// }
 
-export default hideOnScrollDown
+// export default hideOnScrollDown

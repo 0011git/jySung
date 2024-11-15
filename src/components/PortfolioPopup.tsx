@@ -1,11 +1,14 @@
 import React from 'react'
 import popupStyle from '@/styles/portfolioPopup.module.scss'
-import portfolio from '@/data/portfolio.json'
 import { PortfolioItemType } from '../type/types'
 
+interface popupProps {
+    popupItem: PortfolioItemType;
+    setIsClicked: React.Dispatch<React.SetStateAction<boolean>>;
+  }
 
 
-const PortfolioPopup = ({popupItem, setIsClicked}:{popupItem:PortfolioItemType, setIsClicked:any}) => {
+const PortfolioPopup: React.FC<popupProps> = ({popupItem, setIsClicked}) => {
   return (
     <div className={popupStyle.PortfolioPopupWrap} onClick={() => setIsClicked(false)}>
         <div className={popupStyle.popupBox} onClick={(e) => e.stopPropagation()}>
@@ -34,7 +37,7 @@ const PortfolioPopup = ({popupItem, setIsClicked}:{popupItem:PortfolioItemType, 
                             <ul className={popupStyle.usedSkillsWrap}>
                             {
                                 popupItem.techs.map((tech) => {
-                                    return <li className={popupStyle.skill}>
+                                    return <li className={popupStyle.skill} key={`popup_${tech}`}>
                                         <img src={tech} />
                                     </li>
                                 })
@@ -86,7 +89,7 @@ const PortfolioPopup = ({popupItem, setIsClicked}:{popupItem:PortfolioItemType, 
                     <div className={popupStyle.imgsGroup}>
                         {
                             popupItem.screenshot.map((imgsrc) => {
-                                return  <div className={popupStyle.imgWrap}>
+                                return  <div className={popupStyle.imgWrap} key={imgsrc}>
                                     <img src={imgsrc} />
                                 </div>
                             })

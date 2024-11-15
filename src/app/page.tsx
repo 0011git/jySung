@@ -120,7 +120,7 @@ export default function Home() {
         <ul className={mainStyle.skillCardsWrap}>
           {
             skillsArr.map((item: SkillType, idx: number) => (
-              <li className={mainStyle.cardWrap} key={item.names[0]}>
+              <li className={mainStyle.cardWrap} key={`${item.names[0]}${idx}`}>
                 <SkillCard item={item} />
               </li>
             ))
@@ -147,7 +147,7 @@ export default function Home() {
           <ul className={`${mainStyle.teamContents} ${mainStyle.portfolioCardsGroup}`} >
             {/* 큰카드컴포2 */}
             {
-              portfolioData.team.map((item)=> (
+              portfolioData.team.map((item:PortfolioItemType)=> (
                 <li className={mainStyle.pCardWrap} key={item.title}>
                   <PortfolioCard item={item} setPopupItem={setPopupItem}  setIsClicked={setIsClicked} />
                 </li>
