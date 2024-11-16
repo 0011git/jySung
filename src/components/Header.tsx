@@ -1,5 +1,6 @@
 import React from 'react'
 import headerStyle from '../styles/header.module.scss'
+import Link from 'next/link'
 
 // 헤더 클릭 시 스크롤 하는 법
 // https://developer.mozilla.org/ko/docs/Web/API/Element/scrollIntoView
@@ -8,9 +9,9 @@ import headerStyle from '../styles/header.module.scss'
 const Header = () => {
   return (
     <div className={headerStyle.headerWrap}>
-        <a href="/" className={headerStyle.linkLogo}>
+        <Link href="/" className={headerStyle.linkLogo}>
           <h1 className='logo'></h1>
-        </a>
+        </Link>
         
         <nav>
             <ul>
