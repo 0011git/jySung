@@ -32,7 +32,7 @@
             "people":[{"name":"이한주", "role":"팀장, 디자인"},{"name":"성주영", "role":"리소스 수집"},{"name":"윤경빈", "role":"배포"},{"name":"이홍영", "role":"개발"},{"name":"허다영", "role":"기획"}],
             "techs":["./icons/tech/html5.svg", "./icons/tech/sass.svg","./icons/tech/javascript.svg", "./icons/tech/json.svg", "./icons/tech/github.svg"],
             "summary": ["구형의 '다온 펜션' 사이트를 리뉴얼 했습니다.", "전반적으로 노후화된 기존의 '다온 펜션' 사이트를 리뉴얼한 프로젝트 입니다."],
-            "github": "https://github.com/qodql/daon",
+            "github": "https://github.com/0011git/daon-sjy",
             "link": "https://qodql.github.io/daon/",
             "description": [ 
                 "다온 펜션 리뉴얼은 저의 첫 팀 프로젝트입니다. 전반적으로 노후화된 기존의 사이트를 리뉴얼해 사용자 경험을 개선하고 만족도를 향상시키는 것을 목표로 했습니다. 개발 환경은 HTML, SCSS, 바닐라 자바스크립트 입니다. 5명의 팀원이 86일간 작업했습니다."
