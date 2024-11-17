@@ -9,13 +9,18 @@ interface popupProps {
 
 
 const PortfolioPopup: React.FC<popupProps> = ({popupItem, setIsClicked}) => {
+    // const scrollToTop = () => {
+    //     const popupBox:Element|null = document.querySelector(".popupBox");
+    //     const popupTop = popupBox.offsetTop;
+    //     window.scroll({top:popupTop})
+    // }
   return (
-    <div className={popupStyle.PortfolioPopupWrap} onClick={() => setIsClicked(false)}>
+    <div className={popupStyle.PortfolioPopupWrap} onClick={() => {setIsClicked(false);}}>
         <div className={popupStyle.popupBox} onClick={(e) => e.stopPropagation()}>
             <div className={popupStyle.container}>
                 <div className={popupStyle.infoWrap}>
                     <span className={popupStyle.closeBtnWrap}>
-                        <button onClick={() => setIsClicked(false)}></button>
+                        <button onClick={() => {setIsClicked(false);}}></button>
                     </span>
                     <span className={popupStyle.work}>
                         {popupItem.type === "team" ? '팀' : '개인'} 프로젝트
@@ -66,23 +71,26 @@ const PortfolioPopup: React.FC<popupProps> = ({popupItem, setIsClicked}) => {
                     ))}
                 </div>
 
-                <div className={popupStyle.videoWrap}>
-                    <h3>영상</h3>
-                    <div className={popupStyle.videoFrame}>
-                        {
-                            <iframe 
-                                width="960" 
-                                height="540"
-                                src={`${popupItem.video}&mute=1`} 
-                                title="YouTube video player" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                // referrerpolicy="strict-origin-when-cross-origin" 
-                                // allowfullscreen
-                            >
-                            </iframe>
-                        }
-                    </div>
-                </div>
+                {
+                    popupItem.video === '' ? <div className={popupStyle.videoWrap}></div> :
+                        <div className={popupStyle.videoWrap}>
+                            <h3>영상</h3>
+                            <div className={popupStyle.videoFrame}>
+                                {
+                                    <iframe 
+                                        width="960" 
+                                        height="540"
+                                        src={`${popupItem.video}&mute=1`} 
+                                        title="YouTube video player" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        // referrerpolicy="strict-origin-when-cross-origin" 
+                                        // allowfullscreen
+                                    >
+                                    </iframe>
+                                }
+                            </div>
+                        </div>
+                }
 
                 <div className={popupStyle.screenshotWrap}>
                     <h3>스크린샷</h3>

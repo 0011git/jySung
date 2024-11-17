@@ -17,6 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+
   // const hide = hideOnScrollDown();
 
   return (

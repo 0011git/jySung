@@ -7,13 +7,31 @@ import SkillCard from "@/components/SkillCard";
 import PortfolioCard from "@/components/PortfolioCard";
 import PortfolioPopup from "@/components/PortfolioPopup";
 import portfolioData from '@/data/portfolio.json';
-import { useState } from "react";
+import { useRef, useState } from "react";
+import Link from "next/link";
 
 
 
 export default function Home() {
   const [popupItem, setPopupItem] = useState<PortfolioItemType>(portfolioData.team[0]);
   const [isClicked, setIsClicked] = useState(false);
+
+
+  const scrollToProject = (target:string) => {
+    const team = document.querySelector('#team-project');
+    const solo = document.querySelector('#solo-project');
+
+    switch(target){
+      case "team":
+        team?.scrollIntoView({behavior: 'smooth'});
+        break;
+      case "solo":
+        solo?.scrollIntoView({behavior: 'smooth'});
+        break;
+      default:
+        break;
+    }
+  }
 
   const getAge = (): number => {
     const today = new Date();
@@ -29,7 +47,7 @@ export default function Home() {
   return (
     <div className={`${mainStyle.mainStyle} ${isClicked ? 'stopScroll' : ''}`}>
       {/* 0. Visual */}
-      <section className={mainStyle.visual}>
+      <section id="visual-section" className={mainStyle.visual}>
         <div className={mainStyle.greeting}>
           <p>반갑습니다,</p>
           <p>프론트엔드 개발자</p>
@@ -40,7 +58,7 @@ export default function Home() {
         </div>
       </section>
       {/* 1. 프로필 */}
-      <section className={mainStyle.profile}>
+      <section id="profile-section" className={mainStyle.profile}>
         <h2 className={mainStyle.sectionTitleWrap}>
           <strong className={mainStyle.sectionTitle}>profile</strong>
           <em className={mainStyle.sectionSubtitle}>프로필</em>
@@ -67,7 +85,7 @@ export default function Home() {
                 <div className={mainStyle.itemWrap}>
                   <h3 className={mainStyle.itemTitle}>channel</h3>
                   <p className={mainStyle.channel}>
-                    <a className={mainStyle.github} href="https://github.com/0011git">https://github.com/0011git</a>
+                    <Link className={mainStyle.github} href="https://github.com/0011git" target="_blank">https://github.com/0011git</Link>
                   </p>
                 </div>
               </li>
@@ -110,7 +128,7 @@ export default function Home() {
         </div>
       </section>
       {/* 2. 기술 */}
-      <section className={mainStyle.skills}>
+      <section id="skills-section" className={mainStyle.skills}>
         <h2 className={mainStyle.sectionTitleWrap}>
           <strong className={mainStyle.sectionTitle}>skills</strong>
           <em className={mainStyle.sectionSubtitle}>기술</em>
@@ -126,16 +144,16 @@ export default function Home() {
         </ul>
       </section>
       {/* 3. 포트폴리오 */}
-      <section className={mainStyle.portfolio}>
+      <section id="portfolio-section" className={mainStyle.portfolio}>
         <h2 className={mainStyle.sectionTitleWrap}>
           <strong className={mainStyle.sectionTitle}>portfolio</strong>
           <em className={mainStyle.sectionSubtitle}>포트폴리오</em>
         </h2>
         <div className={mainStyle.portfolioBtnGroup}>
-          <div className={mainStyle.btnWrap}><button type="button">Team</button></div>
-          <div className={mainStyle.btnWrap}><button type="button">Solo</button></div>
+          <div onClick={() => scrollToProject('team')} className={mainStyle.btnWrap}><button type="button">Team</button></div>
+          <div onClick={() => scrollToProject('solo')} className={mainStyle.btnWrap}><button type="button">Solo</button></div>
         </div>
-        <div className={`${mainStyle.portfolioCommon} ${mainStyle.teamWrap}`}>
+        <div id="team-project" className={`${mainStyle.portfolioCommon} ${mainStyle.teamWrap}`}>
           <h3 className={mainStyle.portfolioTitleWrap}>
             <strong className={mainStyle.portfolioTitle}>Team Projects</strong>
             <em className={mainStyle.portfolioSubtitle}>팀 프로젝트</em>
@@ -151,7 +169,7 @@ export default function Home() {
             }
           </ul>
         </div>
-        <div className={`${mainStyle.portfolioCommon} ${mainStyle.soloWrap}`}>
+        <div id="solo-project" className={`${mainStyle.portfolioCommon} ${mainStyle.soloWrap}`}>
           <h3 className={mainStyle.portfolioTitleWrap}>
             <strong className={mainStyle.portfolioTitle}>Solo Projects</strong>
             <em className={mainStyle.portfolioSubtitle}>개인 프로젝트</em>
@@ -176,7 +194,7 @@ export default function Home() {
         </div>
       </section>
       {/* 4. 기타 경험 */}
-      <section className={mainStyle.others}>
+      <section id="others-section" className={mainStyle.others}>
         <h2 className={mainStyle.sectionTitleWrap}>
           <strong className={mainStyle.sectionTitle}>other experiences</strong>
           <em className={mainStyle.sectionSubtitle}>기타 경험</em>
