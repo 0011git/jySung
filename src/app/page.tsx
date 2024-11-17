@@ -7,7 +7,7 @@ import SkillCard from "@/components/SkillCard";
 import PortfolioCard from "@/components/PortfolioCard";
 import PortfolioPopup from "@/components/PortfolioPopup";
 import portfolioData from '@/data/portfolio.json';
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 
