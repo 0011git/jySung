@@ -9,18 +9,26 @@ interface popupProps {
 
 
 const PortfolioPopup: React.FC<popupProps> = ({popupItem, setIsClicked}) => {
-    // const scrollToTop = () => {
-    //     const popupBox:Element|null = document.querySelector(".popupBox");
-    //     const popupTop = popupBox.offsetTop;
-    //     window.scroll({top:popupTop})
-    // }
+    
+    
+    const closePopup = () => {
+        const resetScroll = () => {
+            const top = document.querySelector('#popup-container');
+            top?.scrollIntoView()
+        }
+        resetScroll();
+        setIsClicked(false);
+        
+    }
+
+
   return (
-    <div className={popupStyle.PortfolioPopupWrap} onClick={() => {setIsClicked(false);}}>
+    <div className={popupStyle.PortfolioPopupWrap} onClick={() => closePopup()}>
         <div className={popupStyle.popupBox} onClick={(e) => e.stopPropagation()}>
-            <div className={popupStyle.container}>
+            <div id="popup-container" className={popupStyle.container}>
                 <div className={popupStyle.infoWrap}>
                     <span className={popupStyle.closeBtnWrap}>
-                        <button onClick={() => {setIsClicked(false);}}></button>
+                        <button onClick={() => closePopup()}></button>
                     </span>
                     <span className={popupStyle.work}>
                         {popupItem.type === "team" ? '팀' : '개인'} 프로젝트
