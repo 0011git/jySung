@@ -178,8 +178,13 @@ export default function Home() {
             {/* {카드컴포2+4} */}
             <li className={mainStyle.bigWrap}>
               <ul>
-                {/* <li className={mainStyle.pCardWrap}><PortfolioCard /></li>
-                <li className={mainStyle.pCardWrap}><PortfolioCard /></li> */}
+              {
+                (portfolioData.solo.slice(0,2)).map((item:PortfolioItemType) => (
+                  <li className={mainStyle.pCardWrap} key={item.title}>
+                    <PortfolioCard item={item} setPopupItem={setPopupItem}  setIsClicked={setIsClicked} />
+                  </li>
+                ))
+              }
               </ul>
             </li>
             <li className={mainStyle.smallWrap}>

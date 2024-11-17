@@ -20,7 +20,7 @@
                 ,
                 "보다 자세한 설명은 상단 GitHub 링크의 README를 통해 확인하실 수 있습니다."
             ],
-            "video": "https://www.youtube.com/embed/BJ3kw3o9Hzs?si=tnLRM1g6d72Ys3iL",
+            "video": "",
             "screenshot": ["./imgs/seoulw_thumbnail.png","./imgs/seoulw_sub2.png", "./imgs/seoulw_details.png"]            
         },
         { 
@@ -43,50 +43,50 @@
                 ,
                 "보다 자세한 개발 상세 설명은 상단 GitHub 링크의 README를 통해 확인하실 수 있습니다."
             ],
-            "video": "https://www.youtube.com/embed/BJ3kw3o9Hzs?si=tnLRM1g6d72Ys3iL",
+            "video": "",
             "screenshot": ["./imgs/daon_around_spot.png","./imgs/daon_login.png","./imgs/daon_details.png"]
         }
     ],
     "solo":[
         {
             "type": "solo",
-            "thumbnail":"",
+            "thumbnail":"./imgs/worldnews_thumbnail.png",
             "title":"World News",
             "subtitle":"월드 뉴스",
-            "date": ["2024.10.25", "2024.11.00"],
+            "date": ["2024.10.25", "2024.11.07"],
+            "people": [{"name":"성주영", "role":"1인 프로젝트"}],
             "techs":["./icons/tech/vuejs.svg", "./icons/tech/vuex.svg","./icons/tech/express.svg", "./icons/tech/vercel.svg", "./icons/tech/postman.svg", "./icons/tech/axios.svg", "./icons/tech/sass.svg"],
-            "summary": ["프로젝트 한 줄 설명입니다. 프로젝트에 관한 간단한 개요 및 사이트에 관한 설명을 작성합니다.","이전 페이지의 내용을 약간 변경한 사이트 한 줄 요약/설명 입니다. 24px+bold로 작성합니다."],
-            "github": "https://github.com/qodql/daon",
-            "link": "https://qodql.github.io/daon/",
+            "summary": ["모바일 뉴스 사이트 World News 입니다.","vue.js로 제작한 국내ㆍ해외 실시간 뉴스 제공 모바일 사이트 입니다."],
+            "github": "https://github.com/0011git/worldnews",
+            "link": "https://worldnews-one.vercel.app/",
             "description": [ 
-                "주제, 목표, 핵심 기능, 주요 기술 스택, 기간, 개발 인원과 내가 맡은 역할을 작성합니다. 모든 내용은 2~3줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 line-height는 180%입니다."
+                "실시간 뉴스 컨텐츠를 제공하는 모바일 전용 뉴스 사이트 입니다. 주요 기술 스택은 Vue.js, Express, Vercel이며 약 2주 간 작업했습니다."
                 ,                             
-                "리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~5줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다. 리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다.  리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다. 리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 줄간격은 180%로 합니다."
-                ,                             
-                "마무리 부분은 2~4줄 이내로 작성하도록 합니다."
+                "딥서치 뉴스 API(1.0.0)를 이용해 컨텐츠를 제공합니다. API 요청을 위해 Express로 서버를 구축했으며 Vercel로 배포해 변동 사항이 실시간으로 반영되는 자동화된 배포 환경을 구축했습니다."
                 ,
-                " github 리드미에 더 자세한 설명이 있는 경우 어떤 내용이 추가적으로 있는지와 함께 (ex. 기획서 링크, 피그마 디자인, 폴더 구조 등) 해당 링크로 유도하는 멘트를 추가합니다. 폰트 크기는 16px이며 줄간격은 180%로 합니다."
+                "보다 자세한 개발 상세 설명은 상단 GitHub 링크의 README를 통해 확인하실 수 있습니다."
             ],
-            "video": "https://www.youtube.com/embed/BJ3kw3o9Hzs?si=tnLRM1g6d72Ys3iL",
-            "screenshot": []
+            "video": "",
+            "screenshot": ["./imgs/worldnews_sub.png"]
         },
         {
             "type": "solo",
-            "thumbnail":"",
+            "thumbnail":"./imgs/limemovie_thumbnail.png",
             "title":"LimeMovie",
             "subtitle":"라임무비",
             "date": ["2024.10.25", "2024.11.00"],
+            "people": [{"name":"성주영", "role":"1인 프로젝트"}],
             "techs":["./icons/tech/react.svg", "./icons/tech/sass.svg"],
-            "summary": ["프로젝트 한 줄 설명입니다. 프로젝트에 관한 간단한 개요 및 사이트에 관한 설명을 작성합니다.","이전 페이지의 내용을 약간 변경한 사이트 한 줄 요약/설명 입니다. 24px+bold로 작성합니다."],
-            "github": "https://github.com/qodql/daon",
-            "link": "https://qodql.github.io/daon/",
+            "summary": ["영화 정보 제공 사이트 LimeMovie입니다.", "TMDB API를 활용한 영화 정보 제공 사이트 LimeMovie(라임무비)입니다."],
+            "github": "https://github.com/0011git/limemovie",
+            "link": "https://0011git.github.io/limemovie/",
             "description": [ 
-                "주제, 목표, 핵심 기능, 주요 기술 스택, 기간, 개발 인원과 내가 맡은 역할을 작성합니다. 모든 내용은 2~3줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 line-height는 180%입니다.",                             
-                "리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~5줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다. 리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다.  리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다. 리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 줄간격은 180%로 합니다.",                             
-                "마무리 부분은 2~4줄 이내로 작성하도록 합니다. github 리드미에 더 자세한 설명이 있는 경우 어떤 내용이 추가적으로 있는지와 함께 (ex. 기획서 링크, 피그마 디자인, 폴더 구조 등) 해당 링크로 유도하는 멘트를 추가합니다. 폰트 크기는 16px이며 줄간격은 180%로 합니다."
+                "리액트를 이용해 약 2주 간 제작했습니다.",                             
+                "트렌딩, 상영중, 장르별 등 각각의 컨텐츠에 맞게 API를 요청해 페이지에 렌더링합니다. 이 외에 TOP100은 평점이 높은 순으로, '가볍게 보는 짧은 영화'는 2시간 이하의 영화를 노출합니다.",                             
+                "디테일 페이지에서는 줄거리, 평점, 트레일러 정보 등 보다 자세한 관련 정보를 제공합니다."
             ],
-            "video": "https://www.youtube.com/embed/BJ3kw3o9Hzs?si=tnLRM1g6d72Ys3iL",
-            "screenshot": ["","","","","",""]
+            "video": "",
+            "screenshot": ["./imgs/limemovie_sub.png","./imgs/limemovie_details.png"]
         },
         {
             "type": "solo",
@@ -94,6 +94,7 @@
             "title":"To Do List",
             "subtitle":"투두 리스트",
             "date": ["2024.10.25", "2024.11.00"],
+            "people": [{"name":"성주영", "role":"1인 프로젝트"}],
             "techs":["./icons/tech/vuejs.svg", "./icons/tech/vuex.svg","./icons/tech/express.svg", "./icons/tech/vercel.svg", "./icons/tech/postman.svg", "./icons/tech/axios.svg", "./icons/tech/sass.svg"],
             "summary": ["프로젝트 한 줄 설명입니다. 프로젝트에 관한 간단한 개요 및 사이트에 관한 설명을 작성합니다.","이전 페이지의 내용을 약간 변경한 사이트 한 줄 요약/설명 입니다. 24px+bold로 작성합니다."],
             "github": "https://github.com/qodql/daon",
@@ -103,8 +104,8 @@
                 "리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~5줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다. 리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다.  리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다. 리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 줄간격은 180%로 합니다.",                             
                 "마무리 부분은 2~4줄 이내로 작성하도록 합니다. github 리드미에 더 자세한 설명이 있는 경우 어떤 내용이 추가적으로 있는지와 함께 (ex. 기획서 링크, 피그마 디자인, 폴더 구조 등) 해당 링크로 유도하는 멘트를 추가합니다. 폰트 크기는 16px이며 줄간격은 180%로 합니다."
             ],
-            "video": "https://www.youtube.com/embed/BJ3kw3o9Hzs?si=tnLRM1g6d72Ys3iL",
-            "screenshot": ["","","","","",""]
+            "video": "",
+            "screenshot": ["",""]
         },
         {
             "type": "solo",
@@ -112,6 +113,7 @@
             "title":"Money Tracker",
             "subtitle":"가계부",
             "date": ["2024.10.25", "2024.11.00"],
+            "people": [{"name":"성주영", "role":"1인 프로젝트"}],
             "techs":["./icons/tech/vuejs.svg", "./icons/tech/vuex.svg","./icons/tech/express.svg", "./icons/tech/vercel.svg", "./icons/tech/postman.svg", "./icons/tech/axios.svg", "./icons/tech/sass.svg"],
             "summary": ["프로젝트 한 줄 설명입니다. 프로젝트에 관한 간단한 개요 및 사이트에 관한 설명을 작성합니다.","이전 페이지의 내용을 약간 변경한 사이트 한 줄 요약/설명 입니다. 24px+bold로 작성합니다."],
             "github": "https://github.com/qodql/daon",
@@ -121,8 +123,8 @@
                 "리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~5줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다. 리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다.  리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 180%로 합니다. 리드미에 작성한 부분 중 가장 보여주고 싶은 부분을 설명합니다. 이 단락은 3~6줄 이내로 작성하도록 합니다. 폰트 크기는 16px이며 줄간격은 180%로 합니다.",                             
                 "마무리 부분은 2~4줄 이내로 작성하도록 합니다. github 리드미에 더 자세한 설명이 있는 경우 어떤 내용이 추가적으로 있는지와 함께 (ex. 기획서 링크, 피그마 디자인, 폴더 구조 등) 해당 링크로 유도하는 멘트를 추가합니다. 폰트 크기는 16px이며 줄간격은 180%로 합니다."
             ],
-            "video": "https://www.youtube.com/embed/BJ3kw3o9Hzs?si=tnLRM1g6d72Ys3iL",
-            "screenshot": ["","","","","",""]
+            "video": "",
+            "screenshot": ["",""]
         }
     ]
 }
