@@ -6,6 +6,7 @@
     section{
         &:not(:first-of-type){
             max-width: 960px;
+            padding-top: 80px;
             margin: 0 auto;
         }
         &:not(:first-of-type,:last-of-type){
