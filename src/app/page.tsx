@@ -206,7 +206,7 @@ export default function Home() {
         </h2>
       </section>
       
-
+      {/* 팝업 */}
       <div className={ isClicked ? 'show' : 'hide'}>
         <PortfolioPopup popupItem={popupItem} setIsClicked={setIsClicked} />
       </div>

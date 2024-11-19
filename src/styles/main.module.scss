@@ -206,7 +206,7 @@
     // 3. 포트폴리오
     .portfolio{
         .portfolioBtnGroup{
-            margin-bottom: 160px;
+            margin-bottom: 60px;
             display: flex;
             .btnWrap{
                 &:not(:last-of-type) {
@@ -218,14 +218,14 @@
                     font-weight: 700;
                     border: 1px solid #111111;
                     border-radius: 100px;
-                    
                 }
             }
         }
 
         .portfolioCommon {
+            padding-top: 80px;
             &:not(:last-of-type){
-                margin-bottom: 240px;
+                margin-bottom: 160px;
             }
             .portfolioTitleWrap{
                 margin: 0 0 52px 20px;

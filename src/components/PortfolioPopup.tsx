@@ -1,6 +1,7 @@
 import React from 'react'
 import popupStyle from '@/styles/portfolioPopup.module.scss'
 import { PortfolioItemType } from '../type/types'
+import Link from 'next/link';
 
 interface popupProps {
     popupItem: PortfolioItemType;
@@ -72,11 +73,19 @@ const PortfolioPopup: React.FC<popupProps> = ({popupItem, setIsClicked}) => {
                         {popupItem.summary[1]}
                     </p>
 
-                    {popupItem.description.map((description, index) => (
-                        <p key={index} className={`${popupStyle[`detail${index + 1}`]} ${popupStyle.detailcommon}`}>
-                            {description}
-                        </p>
-                    ))}
+                    {
+                        popupItem.description.map((description, index) => (
+                            <p key={index} className={`${popupStyle[`detail${index + 1}`]} ${popupStyle.detailcommon}`}>
+                                {description}
+                            </p>
+                        ))
+                    }
+
+                    {
+                        <span>
+                            <Link href={popupItem.github} target="_blank" className={popupStyle.linkToGithub}>README 바로가기</Link>
+                        </span>
+                    }
                 </div>
 
                 {

@@ -18,7 +18,7 @@
                 ,                             
                 "이 프로젝트를 통해 데이터 흐름 설계의 중요성에 대해 배울 수 있었습니다. 또한 PC와 모바일 환경에서의 페이지 구조 간 차이점에 대해서도 이해하게 되었습니다. 그리고 PWA에 대해 배우고 이를 실제로 적용해 볼 수 있었습니다."
                 ,
-                "보다 자세한 설명은 상단 GitHub 링크의 README를 통해 확인하실 수 있습니다."
+                "보다 자세한 설명은 GitHub의 README를 통해 확인하실 수 있습니다."
             ],
             "video": "",
             "screenshot": ["./imgs/seoulw_thumbnail.png","./imgs/seoulw_sub2.png", "./imgs/seoulw_details.png"]            
@@ -41,7 +41,7 @@
                 ,                             
                 "저는 리소스 수집과 1차 발표를 담당했습니다. 페이지는 주변 소개와 로그인 관련 페이지를 작업했으며 해당 페이지에서 사용하는 기능을 함께 구현했습니다. 주요 구현 기능은 동적 인터페이스와 로그인 기능입니다. SNS 로그인 및 회원가입을 바닐라 자바스크립트로 구현하며 프론트에서의 로그인 프로세스를 공부하고 이해하는 기회가 되었습니다."
                 ,
-                "보다 자세한 개발 상세 설명은 상단 GitHub 링크의 README를 통해 확인하실 수 있습니다."
+                "보다 자세한 개발 상세 설명은 GitHub의 README를 통해 확인하실 수 있습니다."
             ],
             "video": "",
             "screenshot": ["./imgs/daon_around_spot.png","./imgs/daon_login.png","./imgs/daon_details.png"]
@@ -64,7 +64,7 @@
                 ,                             
                 "딥서치 뉴스 API(1.0.0)를 이용해 컨텐츠를 제공합니다. API 요청을 위해 Express로 서버를 구축했으며 Vercel로 배포해 변동 사항이 실시간으로 반영되는 자동화된 배포 환경을 구축했습니다."
                 ,
-                "보다 자세한 개발 상세 설명은 상단 GitHub 링크의 README를 통해 확인하실 수 있습니다."
+                "보다 자세한 개발 상세 설명은 GitHub의 README를 통해 확인하실 수 있습니다."
             ],
             "video": "",
             "screenshot": ["./imgs/worldnews_sub.png"]
