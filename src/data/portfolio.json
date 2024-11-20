@@ -2,7 +2,7 @@
     "team":[
         {
             "type": "team",
-            "thumbnail":"./imgs/seoulw_thumbnail.png",
+            "thumbnail":"./imgs/seoulw_thumbnail2.png",
             "title":"Seoul, W",
             "subtitle":"서울더블유",
             "date": ["2024.09.30", "2024.10.17"],
@@ -25,7 +25,7 @@
         },
         { 
             "type": "team",
-            "thumbnail":"./imgs/daon_thumbnail.png",
+            "thumbnail":"./imgs/daon_thumbnail_gif.gif",
             "title":"Daon",
             "subtitle":"다온 펜션 리뉴얼",
             "date": ["2024.06.19", "2024.09.12"],
