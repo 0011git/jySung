@@ -53,16 +53,16 @@
             "thumbnail":"./imgs/worldnews_thumbnail.png",
             "title":"World News",
             "subtitle":"월드 뉴스",
-            "date": ["2024.10.25", "2024.11.07"],
+            "date": ["2024.10.25", "2024.11.22"],
             "people": [{"name":"성주영", "role":"1인 프로젝트"}],
             "techs":["./icons/tech/vuejs.svg", "./icons/tech/vuex.svg","./icons/tech/express.svg", "./icons/tech/vercel.svg", "./icons/tech/postman.svg", "./icons/tech/axios.svg", "./icons/tech/sass.svg"],
             "summary": ["모바일 뉴스 사이트 월드 뉴스입니다.","vue.js로 제작한 국내ㆍ해외 실시간 뉴스 제공 모바일 사이트 입니다."],
             "github": "https://github.com/0011git/worldnews",
             "link": "https://worldnews-one.vercel.app/",
             "description": [ 
-                "실시간 뉴스 컨텐츠를 제공하는 모바일 전용 뉴스 사이트 입니다. 주요 기술 스택은 Vue.js, Express, Vercel이며 약 2주 간 작업했습니다."
+                "실시간 뉴스 컨텐츠를 제공하는 모바일 전용 뉴스 사이트 입니다. 주요 기술 스택은 Vue.js, Express, Vercel입니다. 다른 프로젝트와 병행해 사이드 프로젝트로 약 17일에 걸쳐 작업했습니다."
                 ,                             
-                "딥서치 뉴스 API(1.0.0)를 이용해 컨텐츠를 제공합니다. API 요청을 위해 Express로 서버를 구축했으며 Vercel로 배포해 변동 사항이 실시간으로 반영되는 자동화된 배포 환경을 구축했습니다."
+                "딥서치 뉴스 API(1.0.0)를 이용해 컨텐츠를 제공합니다. API 요청을 위해 Express로 서버를 구축했으며 Vercel로 배포해 변동 사항이 실시간으로 반영되는 자동화된 배포 환경을 구축했습니다. 사이트 구조는 탑다운 방식으로 카테고리 구조와 API 엔드포인트 구조를 일치시켰습니다. 또한 API 무료 요청 횟수가 월 300회로 제한됐기 때문에 API요청 횟수를 최대한 줄이면서 컨텐츠를 보여줄 수 있도록 했습니다.  "
                 ,
                 "보다 자세한 개발 상세 설명은 GitHub의 README를 통해 확인하실 수 있습니다."
             ],
