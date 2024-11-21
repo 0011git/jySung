@@ -48,10 +48,28 @@ export default function Home() {
     <div className={`${mainStyle.mainStyle} ${isClicked ? 'stopScroll' : ''}`}>
       {/* 0. Visual */}
       <section id="visual-section" className={mainStyle.visual}>
-        <div className={mainStyle.greeting}>
-          <p>반갑습니다,</p>
-          <p>프론트엔드 개발자</p>
-          <p>성주영입니다.</p>
+        <div className={mainStyle.contentsWrap}>
+          <div className={mainStyle.textWrap}>
+            <div className={mainStyle.greetingWrap}>
+              <span className={mainStyle.sayhello}>👋 반갑습니다!</span>
+              <p className={mainStyle.introduceCommon}>프론트엔드 개발자</p>
+              <p className={mainStyle.introduceCommon}>
+                <span className={mainStyle.name}>성주영</span>입니다.
+              </p>
+            </div>
+            <div className={mainStyle.wordWrap}>
+              <p>문제를 찾아 해결하고 나아가 비즈니스적 가치를 창출하는 것이</p>
+              <p>개발자의 핵심 역량이라고 생각합니다.</p>
+            </div>
+            <div className={mainStyle.snsWrap}>
+              <button type="button" className={mainStyle.github}></button>
+              <button type="button" className={mainStyle.google}></button>
+              <button type="button" className={mainStyle.linkedin}></button>
+            </div>
+          </div>
+          <div className={mainStyle.imgWrap}>
+            <img src="/imgs/main.png" />
+          </div>
         </div>
         <div className={mainStyle.mouseWrap}>
             <div className={mainStyle.mouse}></div>

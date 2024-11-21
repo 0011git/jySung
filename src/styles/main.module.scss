@@ -119,22 +119,79 @@
     .visual{
         width: 100%;
         height: 100vh;
-        margin-bottom: 40px;
+        padding-top: 80px;
         background-color: #101F5A;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        .greeting{
-            width: 100%;
+        .contentsWrap{
+            width: 80%;
             max-width: 960px;
-            height: 80%;
-            padding-top: 200px;
             margin: 0 auto;
-            p{
-                color: #F7F8FA;
-                font-size: 64px;
-                font-weight: 700;
-                &:first-of-type{
-                    margin-bottom: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .textWrap{
+                width: 60%;
+                .greetingWrap{
+                    max-width: 960px;
+                    .sayhello{
+                        margin-bottom: 52px;
+                        display: block;
+                        color: #FFD255;
+                        font-size: 28px;
+                        font-weight: 700;
+                    }
+                    .introduceCommon{
+                        color: #F7F8FA;
+                        line-height: 0.2;
+                        font-size: 64px;
+                        .name{
+                            color: inherit;
+                            font-size: inherit;
+                            font-weight: 700;
+                        }                        
+                    }
+                }
+                .wordWrap{
+                    margin-bottom: 24px;
+                    p{
+                        color: #F7F8FA;                        
+                    }
+                }
+                .snsWrap{
+                    width: 128px;
+                    height: 32px;
+                    button{
+                        &:not(:last-of-type){
+                            margin-right: 16px;
+                        }
+                        &::after{
+                            width: 32px;
+                            height: 32px;
+                            content: '';
+                            display: inline-block;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            
+                        }
+                        &.github::after{
+                            background-image: url('../../public/icons/github_circle.svg');
+                        }
+                        &.google::after{
+                            background-image: url('../../public/icons/google_circle.svg');
+                        }
+                        &.linkedin::after{
+                            background-image: url('../../public/icons/linkedin_circle.svg');
+                        }
+                    }
+                }
+            }
+            .imgWrap{
+                width: 40%;
+                img{
+
                 }
             }
         }
@@ -145,15 +202,15 @@
             align-items: center;
             justify-content: center;          
             .mouse {
-                width: 44px;
-                height: 80px;
-                border: 3px solid #F7F8FA;
+                width: 22px;
+                height: 40px;
+                border: 2px solid #F7F8FA;
                 border-radius: 60px;
                 position: relative;
             
                 &::before {
-                    width: 10px;
-                    height: 10px;
+                    width: 6px;
+                    height: 6px;
                     content: '';
                     position: absolute;
                     top: 10px;
@@ -162,8 +219,8 @@
                     background-color: #F7F8FA;
                     border-radius: 50%;
                     opacity: 1;
-                    animation: wheel 2s infinite;
-                    -webkit-animation: wheel 2s infinite;
+                    animation: wheel 1.2s infinite;
+                    -webkit-animation: wheel 1.2s infinite;
                 }
             }
               
@@ -171,14 +228,14 @@
               @keyframes wheel {
                 to {
                   opacity: 0;
-                  top: 54px;
+                  top: 20px;
                 }
               }
               
               @-webkit-keyframes wheel {
                 to {
                   opacity: 0;
-                  top: 54px;
+                  top: 20px;
                 }
               }
         }
