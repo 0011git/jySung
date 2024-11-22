@@ -17,13 +17,13 @@
             color: inherit;
             li{
                 color: inherit;
-                padding: 0 16px;
+                padding: 0 4px;
                 font-weight: 700;
                 cursor: pointer;
                 text-transform: capitalize;
                 transition: 0.3s ease;
                 &:not(:last-of-type){
-                    margin-right: 20px;
+                    margin-right: 48px;
                 }
                 &:hover {
                     transform: translateY(-2px);

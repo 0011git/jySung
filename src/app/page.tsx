@@ -36,9 +36,9 @@ export default function Home() {
   // 모달창 열리면 바디 스크롤 막음
   useEffect(() => {
     if(showModal === true) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = 'hidden';
     }else{
-      document.body.style.overflow = 'scroll'
+      document.body.style.removeProperty('overflow');
     }
   }, [showModal])
 
