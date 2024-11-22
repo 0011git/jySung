@@ -301,6 +301,11 @@
                     font-weight: 700;
                 }
             }
+            .pCardWrap{
+                &:not(:last-of-type) {
+                    margin-bottom: 40px;
+                }
+            }
             // 제목 아래 카드들 감싸는 클래스
             .portfolioCardsGroup{
             }
@@ -308,11 +313,7 @@
         // 팀 프로젝트
         .teamWrap{
             .teamContents{
-                .pCardWrap{
-                    &:not(:last-of-type) {
-                        margin-bottom: 100px;
-                    }
-                }
+                
             }
         }
         // 개인 프로젝트
