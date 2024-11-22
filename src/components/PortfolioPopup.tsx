@@ -15,7 +15,7 @@ const PortfolioPopup: React.FC<popupProps> = ({popupItem, setShowModal}) => {
     const closePopup = () => {
         const resetScroll = () => {
             const top = document.querySelector('#popup-container');
-            top?.scrollIntoView()
+            top?.scrollTo({top:0})
         }
         resetScroll();
         setShowModal(false);

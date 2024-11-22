@@ -11,24 +11,28 @@ interface PortfolioCardProps {
 const PortfolioCard: React.FC<PortfolioCardProps> = ({item, setPopupItem, setShowModal}) => {
   return (
     <figure className={portfolioCardStyle.portfolioCardWrap} onClick={() => {setPopupItem(item); setShowModal(true);}}>
-        <div className={portfolioCardStyle.thumbnailWrap}>
-            <img src={item.thumbnail} alt={`${item.title} 썸네일`} />
-        </div>
-        <figcaption className={portfolioCardStyle.descriptionWrap}>
-            <h4 className={portfolioCardStyle.title}>{item.title}</h4>
-            <span className={portfolioCardStyle.when}>{item.date[0]} ~ {item.date[1]}</span>
-            <ul className={portfolioCardStyle.usedSkillsWrap}>
-              {
-                item.techs.map((tech) => {
-                  return <li className={portfolioCardStyle.skill} key={tech}>
-                  <img src={tech} />
-                </li>
-                })
-              }
-            </ul>
-            <p className={portfolioCardStyle.summary}>{item.summary[0]}</p>
-        </figcaption>
-        
+      <div className={portfolioCardStyle.thumbnailWrap}>
+          <div className={portfolioCardStyle.dimmer}></div>
+          <img src={item.thumbnail} alt={`${item.title} 썸네일`} />
+      </div>
+      <figcaption className={portfolioCardStyle.descriptionWrap}>
+          <h4 className={portfolioCardStyle.title}>{item.title}</h4>
+          <span className={portfolioCardStyle.when}>{item.date[0]} ~ {item.date[1]}</span>
+          <ul className={portfolioCardStyle.usedSkillsWrap}>
+            {
+              (item.techs.slice(0,5)).map((tech) => {
+                return <li className={portfolioCardStyle.skill} key={tech}>
+                <img src={tech} />
+              </li>
+              })
+            }
+          </ul>
+          <p className={portfolioCardStyle.summary}>
+            {item.summary[0]}
+            {/* <span className={portfolioCardStyle.viewMore}>상세보기</span> */}
+          </p>
+          
+      </figcaption>
     </figure>
   )
 }

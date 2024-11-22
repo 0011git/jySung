@@ -1,0 +1,43 @@
+@media (max-width: 853px){
+    header{
+
+    }
+    main{
+        #visualImg{
+            display: none;
+        }
+
+    }
+    footer{
+
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        .headerWrap{
+            nav{
+                ul{
+                    li{
+                        &:not(:last-of-type){
+                            margin-right: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main{}
+    footer{}
+}
+
+@media (max-width: 480px) {
+    header{
+        .headerWrap{
+            nav{
+                display: none;
+            }
+        }
+    }
+    
+}

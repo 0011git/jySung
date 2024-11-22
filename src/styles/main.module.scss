@@ -161,10 +161,7 @@
                 .snsWrap{
                     width: 128px;
                     height: 32px;
-                    button{
-                        &:not(:last-of-type){
-                            margin-right: 16px;
-                        }
+                    a{
                         &::after{
                             width: 32px;
                             height: 32px;
@@ -176,14 +173,6 @@
                         }
                         &.github::after{
                             background-image: url('../../public/icons/github_circle.svg');
-                        }
-                        &.google::after{
-                            background-image: url('../../public/icons/google_circle.svg');
-                            display: none;
-                        }
-                        &.linkedin::after{
-                            background-image: url('../../public/icons/linkedin_circle.svg');
-                            display: none;
                         }
                     }
                 }
@@ -338,8 +327,6 @@
     }
     // 4. 기타 경험
     .others{
-        height: 100vh;
-        h2{}
         .othersItemsWrap{
             max-width: 960px;
             // display: flex;

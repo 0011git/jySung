@@ -73,12 +73,10 @@ export default function Home() {
               <p>개발자의 핵심 역량이라고 생각합니다.</p>
             </div>
             <div className={mainStyle.snsWrap}>
-              <button type="button" className={mainStyle.github}></button>
-              <button type="button" className={mainStyle.google}></button>
-              <button type="button" className={mainStyle.linkedin}></button>
+              <Link href="https://github.com/0011git" className={mainStyle.github}></Link>
             </div>
           </div>
-          <div className={mainStyle.imgWrap}>
+          <div className={mainStyle.imgWrap} id="visualImg">
             <img src="/imgs/main.png" />
           </div>
         </div>
