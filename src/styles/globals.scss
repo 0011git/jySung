@@ -7,13 +7,13 @@ body{
         width: 100%;
         margin: 0 auto;
         position: fixed;
-        background-color: rgba($color: #F7F8FA, $alpha:0.5);
+        background-color: #101F5A;
+        color: #F7F8FA;
         z-index: 99;
-        // transition: 0.3s;
-        // transform: translateY(0%);
-        // &.hide{
-        //     transform: translateY(-100%);
-        // }
+        &.visual{
+            background-color: #101F5A;
+            color: #111111;
+        }
     }
     main{
         max-width: inherit;
@@ -30,7 +30,7 @@ body{
             height: 80px;
             display: block;
             content: '';
-            background: url('../../public/icons/logo.svg') center no-repeat;
+            background: url('../../public/icons/logo_white.svg') center no-repeat;
         }
     }
 

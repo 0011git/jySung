@@ -1,16 +1,13 @@
 .mainStyle {
-    &.stopScroll{
-        // height: 100%;
-        overflow: hidden;
-    }
     section{
+        padding: 0 20px;
         &:not(:first-of-type){
             max-width: 960px;
             padding-top: 80px;
             margin: 0 auto;
         }
         &:not(:first-of-type,:last-of-type){
-            margin-bottom: 240px;
+            margin-bottom: 80px;
         }
         .sectionTitleWrap{
             margin-bottom: 48px;
@@ -43,8 +40,9 @@
             .personalInfo{
                 ul{
                     display: flex;
+                    justify-content: space-between;
                     li{
-                        width: 50%;
+                        // width: 50%;
                         .itemWrap{
                             &:not(:last-of-type){
                                 margin-bottom: 36px;
@@ -126,7 +124,6 @@
         align-items: center;
         flex-direction: column;
         .contentsWrap{
-            width: 80%;
             max-width: 960px;
             margin: 0 auto;
             display: flex;
@@ -147,6 +144,7 @@
                         color: #F7F8FA;
                         line-height: 0.2;
                         font-size: 64px;
+                        white-space: nowrap;
                         .name{
                             color: inherit;
                             font-size: inherit;
@@ -181,15 +179,16 @@
                         }
                         &.google::after{
                             background-image: url('../../public/icons/google_circle.svg');
+                            display: none;
                         }
                         &.linkedin::after{
                             background-image: url('../../public/icons/linkedin_circle.svg');
+                            display: none;
                         }
                     }
                 }
             }
             .imgWrap{
-                width: 40%;
                 img{
 
                 }
@@ -197,7 +196,7 @@
         }
         .mouseWrap{
             width: 100%;
-            height: 20%;
+            height: 10%;
             display: flex;
             align-items: center;
             justify-content: center;          
@@ -249,15 +248,20 @@
         .skillCardsWrap{
             margin-top: 120px;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
+            gap: 20px;
         }
         .cardWrap{
-            &:not(:nth-of-type(3n)){
-                margin: 0 20px 20px 0;
-            }
-            &:nth-of-type(3n){
-                margin-bottom: 20px;
-            }
+            width: 30%;
+            height: 100%;
+            // &:not(:nth-of-type(3n)){
+            //     margin: 0 20px 20px 0;
+            // }
+            // &:nth-of-type(3n){
+            //     margin-bottom: 20px;
+            // }
         }
     }
     // 3. 포트폴리오
@@ -332,5 +336,38 @@
         }
     }
     // 4. 기타 경험
-    .others{}
+    .others{
+        height: 100vh;
+        h2{}
+        .othersItemsWrap{
+            max-width: 960px;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            // flex-direction: column;
+            // gap: 20px;
+            .othersItem{
+                padding: 52px 20px 36px;
+                margin-bottom: 40px;
+                background-color: #f3f3f3;
+                border-radius: 20px;
+                overflow: hidden;
+                .othersItemTitle{
+                    margin-bottom: 24px;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+                .othersItemDescriptionsWrap{
+                    border-top: 1px solid #cbc6c3;
+                    .otherItemDate{
+                        margin: 4px 0 8px;
+                        color: #cbc6c3;
+                    }
+                    .otherItemDescription{
+                    }
+                }
+            }
+        }
+
+    }
 }

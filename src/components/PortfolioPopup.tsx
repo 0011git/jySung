@@ -5,11 +5,11 @@ import Link from 'next/link';
 
 interface popupProps {
     popupItem: PortfolioItemType;
-    setIsClicked: React.Dispatch<React.SetStateAction<boolean>>;
+    setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
   }
 
 
-const PortfolioPopup: React.FC<popupProps> = ({popupItem, setIsClicked}) => {
+const PortfolioPopup: React.FC<popupProps> = ({popupItem, setShowModal}) => {
     
     
     const closePopup = () => {
@@ -18,7 +18,7 @@ const PortfolioPopup: React.FC<popupProps> = ({popupItem, setIsClicked}) => {
             top?.scrollIntoView()
         }
         resetScroll();
-        setIsClicked(false);
+        setShowModal(false);
         
     }
 
@@ -38,7 +38,7 @@ const PortfolioPopup: React.FC<popupProps> = ({popupItem, setIsClicked}) => {
                         {popupItem.title} {popupItem.subtitle}
                     </h2>
                     <span className={popupStyle.when}>
-                        {popupItem.date[0]} ~ {popupItem.date[1]}
+                        {popupItem.date[0]} ~ {popupItem.date[1]} {popupItem.type === "team" ? `(${popupItem.people.length}인)` : null }
                     </span>
                     <ul className={popupStyle.links}>
                         <li className={`${popupStyle.github} ${popupStyle.linkCommon}`}>
@@ -124,7 +124,7 @@ const PortfolioPopup: React.FC<popupProps> = ({popupItem, setIsClicked}) => {
 
                 <div className={popupStyle.tagWrap}>
                     <span className={`${popupStyle.tag} ${popupStyle.title}`}>{popupItem.title}</span>
-                    <span className={popupStyle.tag}>{popupItem.type} Project</span>
+                    <span className={`${popupStyle.tag} ${popupStyle.workType}`}>{popupItem.type} project</span>
                 </div>
             </div>
         </div>

@@ -7,24 +7,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: inherit;
     .linkLogo{
-        z-index: 1000;
     }
     nav{
+        color: inherit;
         ul{
             display: flex;
+            color: inherit;
             li{
+                color: inherit;
                 padding: 0 16px;
                 font-weight: 700;
                 cursor: pointer;
                 text-transform: capitalize;
                 transition: 0.3s ease;
                 &:not(:last-of-type){
-                    margin-right: 80px;
+                    margin-right: 20px;
                 }
                 &:hover {
                     transform: translateY(-2px);
-                    text-decoration: underline;
+                    // text-decoration: underline;
                 }
             
             }

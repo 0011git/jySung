@@ -7,16 +7,16 @@ import SkillCard from "@/components/SkillCard";
 import PortfolioCard from "@/components/PortfolioCard";
 import PortfolioPopup from "@/components/PortfolioPopup";
 import portfolioData from '@/data/portfolio.json';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 
 
 export default function Home() {
   const [popupItem, setPopupItem] = useState<PortfolioItemType>(portfolioData.team[0]);
-  const [isClicked, setIsClicked] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
-
+  //팀-솔로 버튼 클릭 시 해당 포폴로 스크롤
   const scrollToProject = (target:string) => {
     const team = document.querySelector('#team-project');
     const solo = document.querySelector('#solo-project');
@@ -33,6 +33,17 @@ export default function Home() {
     }
   }
 
+  // 모달창 열리면 바디 스크롤 막음
+  useEffect(() => {
+    if(showModal === true) {
+      document.body.style.overflow = 'hidden'
+    }else{
+      document.body.style.overflow = 'scroll'
+    }
+  }, [showModal])
+
+
+  // 만나이 구하는 함수
   const getAge = (): number => {
     const today = new Date();
     const todayYYYY: number = today.getFullYear();
@@ -45,7 +56,7 @@ export default function Home() {
   const skillsArr: SkillType[] = skillsData.skills;
 
   return (
-    <div className={`${mainStyle.mainStyle} ${isClicked ? 'stopScroll' : ''}`}>
+    <div className={mainStyle.mainStyle}>
       {/* 0. Visual */}
       <section id="visual-section" className={mainStyle.visual}>
         <div className={mainStyle.contentsWrap}>
@@ -181,7 +192,7 @@ export default function Home() {
             {
               portfolioData.team.map((item:PortfolioItemType)=> (
                 <li className={mainStyle.pCardWrap} key={item.title}>
-                  <PortfolioCard item={item} setPopupItem={setPopupItem}  setIsClicked={setIsClicked} />
+                  <PortfolioCard item={item} setPopupItem={setPopupItem} setShowModal={setShowModal} />
                 </li>
               ))
             }
@@ -199,7 +210,7 @@ export default function Home() {
               {
                 (portfolioData.solo.slice(0,2)).map((item:PortfolioItemType) => (
                   <li className={mainStyle.pCardWrap} key={item.title}>
-                    <PortfolioCard item={item} setPopupItem={setPopupItem}  setIsClicked={setIsClicked} />
+                    <PortfolioCard item={item} setPopupItem={setPopupItem}  setShowModal={setShowModal} />
                   </li>
                 ))
               }
@@ -219,14 +230,30 @@ export default function Home() {
       {/* 4. 기타 경험 */}
       <section id="others-section" className={mainStyle.others}>
         <h2 className={mainStyle.sectionTitleWrap}>
-          <strong className={mainStyle.sectionTitle}>other experiences</strong>
+          <strong className={mainStyle.sectionTitle}>others</strong>
           <em className={mainStyle.sectionSubtitle}>기타 경험</em>
         </h2>
+        <ul className={mainStyle.othersItemsWrap}>
+          <li className={mainStyle.othersItem}>
+            <h3 className={mainStyle.othersItemTitle}>기타 경험 1</h3>
+            <div className={mainStyle.othersItemDescriptionsWrap}>
+                <p className={mainStyle.otherItemDate}>2024.01 ~ 2024.02</p>
+                <p className={mainStyle.otherItemDescription}>기타 경험 설명입니다. 이에 관한 간단한 내용을 작성합니다. 내용은 3~4줄 이내로 간단하게 작성하도록 합니다. 기타 경험 설명입니다. 이에 관한 간단한 내용을 작성합니다. 내용은 3~4줄 이내로 간단하게 작성하도록 합니다.</p>
+            </div> 
+          </li>
+          <li className={mainStyle.othersItem}>
+            <h3 className={mainStyle.othersItemTitle}>기타 경험 2</h3>
+            <div className={mainStyle.othersItemDescriptionsWrap}>
+                <p className={mainStyle.otherItemDate}>2024.01 ~ 2024.02</p>
+                <p className={mainStyle.otherItemDescription}>기타 경험 설명입니다. 이에 관한 간단한 내용을 작성합니다. 내용은 3~4줄 이내로 간단하게 작성하도록 합니다. 줄 간격은 180%입니다. 기타 경험 설명입니다. 이에 관한 간단한 내용을 작성합니다. 내용은 3~4줄 이내로 간단하게 작성하도록 합니다. 기타 경험 설명입니다. 이에 관한 간단한 내용을 작성합니다. 내용은 3~4줄 이내로 간단하게 작성하도록 합니다.</p>
+            </div> 
+          </li>
+        </ul>
       </section>
       
       {/* 팝업 */}
-      <div className={ isClicked ? 'show' : 'hide'}>
-        <PortfolioPopup popupItem={popupItem} setIsClicked={setIsClicked} />
+      <div className={ showModal ? 'show' : 'hide'}>
+        <PortfolioPopup popupItem={popupItem} setShowModal={setShowModal} />
       </div>
     </div>
   );

@@ -7,28 +7,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
     .popupBox{
         max-width: 960px;
         width: 100%;
         height: calc(100% - 144px);
+        margin: 0 32px;
         background-color: #F7F8FA;
-        border-radius: 20px;
-        z-index: 999;
+        border-radius: 20px;        
         overflow: hidden;
         .container{
             height: 100%;
             overflow: hidden auto;  // x축 y축
             .infoWrap{
-                padding: 60px;
+                padding: 40px 20px;
                 position: relative;
                 .closeBtnWrap{
                     position: absolute;
-                    top: 60px;
-                    right: 32px;
+                    top: 40px;
+                    right: 20px;
                     button{
                         &::after{
-                            width: 48px;
-                            height: 48px;
+                            width: 20px;
+                            height: 20px;
                             display: block;
                             content: '';
                             background: url('../../public/icons/close.svg') center no-repeat;
@@ -85,6 +86,7 @@
                         }
                         .usedSkillsWrap{
                             display: flex;
+                            flex-wrap: wrap;
                             .skill{
                                 height: fit-content;
                                 &:not(:last-of-type) {
@@ -102,8 +104,8 @@
                 }
             }
             .descriptionWrap{
-                padding: 80px 60px 0;
-                margin-bottom: 136px;
+                padding: 0 20px;
+                margin: 80px 0;
                 .summary {
                     margin-bottom: 40px;
                     font-size: 24px;
@@ -122,9 +124,9 @@
                 }
             }
             .videoWrap{
-                margin-bottom: 200px;
+                margin-bottom: 80px;
                 h3{
-                    margin: 60px;
+                    margin: 20px;
                     font-size: 24px;
                     font-weight: 700;
                 }
@@ -139,7 +141,7 @@
             }
             .screenshotWrap{
                 h3{
-                    margin-left: 60px;
+                    padding: 20px;
                     font-size: 24px;
                     font-weight: 700;
                 }
@@ -156,10 +158,13 @@
                 text-align: center;
                 background-color: #F7F8FA;
                 .tag{
-                    color: #101F5A;
+                    color: #101F5A;                    
                     font-size: 14px;
                     &.title{
                         font-weight: 700;
+                    }
+                    &.workType{
+                        text-transform: uppercase;
                     }
                     &:not(:last-of-type) {
                         margin-right: 8px;
