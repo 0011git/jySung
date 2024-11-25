@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 👋 jysung
+안녕하세요, 프론트엔드 개발자 성주영의 개인 포트폴리오 사이트 입니다.
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=Next.js&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=Vercel&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-CC6699?style=flat-square&logo=sass&logoColor=white)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔗 배포 URL
+<https://jy-sung.vercel.app/>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📑 요약
+### 1. 주제
+- 개인 포트폴리오 사이트
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. 목표
+- 프로필, 자기 소개 및 포트폴리오 전시
 
-## Learn More
+### 3. 핵심 기능
+- 반응형(태블릿 라지, 태블릿 스몰, 모바일 라지, 모바일 스몰)
 
-To learn more about Next.js, take a look at the following resources:
+### 4. 주요 기술 스택
+- Next.js, Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. 기간 및 인원
+- 2024.11.11 ~ 2024.11.11, 1인
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💡 주요 작업
+### 1. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## 💼 폴더 구조
+````
+
+````
+
+
+
+## 🛠️ 개발 환경  
+| 기술              | 기술명            | Badge                                                           |
+|:-----------------:|:-----------------:|:-------------------------------------------------------------:|
+| **프레임워크**    | Next.js           | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=Next.js&logoColor=white) |
+| **배포**          | Vercel            | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=Vercel&logoColor=white) |
+| **스타일링**      | SASS              | ![SASS](https://img.shields.io/badge/SASS-CC6699?style=flat-square&logo=sass&logoColor=white) |
+
+
+
+
+## 💥 트러블 슈팅
+
+
+
+## 📚 참고 URL
+- 화면 설계 : [jysung Figma](https://www.figma.com/design/aTzvSBkcy0mci8HgkSgYik/portfolio?node-id=0-1&node-type=canvas&t=qxoaKNh5SbJ3mtG9-0)
+- 
