@@ -1,3 +1,4 @@
+@import './_responsive.scss';
 .footerWrap{
     max-width: 960px;
     width: 100%;
@@ -11,3 +12,21 @@
         white-space: nowrap;
     }
 }   
+
+
+@include responsive($tab-s){
+    .footerWrap{
+        .copyright{
+            font-size: 10px;
+        }
+    }
+}
+
+@include responsive($mo-l){
+    .footerWrap{        
+        height: 16px;
+        .copyright{
+            font-size: 8px;
+        }
+    }
+}

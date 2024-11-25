@@ -1,0 +1,27 @@
+$tab-l: 850px;  //태블릿 라지
+$tab-s: 600px;  //태블릿 스몰
+$mo-l: 480px;   //모바일 라지
+$mo-s: 320px;   //모바일 스몰
+
+@mixin responsive($size){
+    @if $size == $tab-l {
+        @media screen and (max-width: #{$tab-l}){  
+            @content;
+        }
+    }
+    @if $size == $tab-s {
+        @media screen and (max-width: #{$tab-s}) {
+            @content;        
+        }
+    }
+    @if $size == $mo-l {
+        @media screen and (max-width: #{$mo-l}) {
+            @content;        
+        }
+    }
+    @if $size == $mo-s {
+        @media screen and (max-width: #{$mo-s}) {
+            @content;        
+        }
+    }
+}   

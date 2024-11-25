@@ -1,6 +1,5 @@
+@import './_responsive.scss';
 .skillCardWrap{
-    // width: 306px;
-    // height: 352px;
     padding: 32px 32px 32px 0;
     background-color: #f3f3f3;
     border-radius: 20px;
@@ -43,6 +42,23 @@
                 }
             }
         }
+    }
+}
 
+@include responsive($mo-l){
+    .skillCardWrap{
+        padding: 40px 20px 24px 0;
+        .logosWrap{
+            display: none;
+        }
+        .namesWrap{
+            margin: 0 0 12px 20px;
+            h3{
+                font-size: 16px;
+            }
+        }
+        .descriptionsWrap{
+            margin-left: 20px;
+        }
     }
 }

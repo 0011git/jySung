@@ -47,8 +47,14 @@ export default function Home() {
   const getAge = (): number => {
     const today = new Date();
     const todayYYYY: number = today.getFullYear();
+    const todayMM: number = today.getMonth();    
     const todayDD: number = today.getDate();
-    const age: number = (todayDD - 25 >= 0) ? (todayYYYY - 1993) : (todayYYYY - 1993) - 1;
+    let age: number = 0;
+    if(todayMM > 0) {
+      age = todayYYYY - 1993;
+    }else{
+      age = (todayDD - 25 >= 0) ? (todayYYYY - 1993) : (todayYYYY - 1993) - 1;
+    }
     return age;
   }
   const age: number = getAge();
@@ -76,7 +82,7 @@ export default function Home() {
               <Link href="https://github.com/0011git" target="_blank" className={mainStyle.github}></Link>
             </div>
           </div>
-          <div className={mainStyle.imgWrap} id="visualImg">
+          <div className={mainStyle.imgWrap}>
             <img src="/imgs/main.png" />
           </div>
         </div>
@@ -87,8 +93,8 @@ export default function Home() {
       {/* 1. 프로필 */}
       <section id="profile-section" className={mainStyle.profile}>
         <h2 className={mainStyle.sectionTitleWrap}>
-          <strong className={mainStyle.sectionTitle}>profile</strong>
           <em className={mainStyle.sectionSubtitle}>프로필</em>
+          <strong className={mainStyle.sectionTitle}>profile</strong>
         </h2>
         <div className={mainStyle.profileContents}>
           <div className={`${mainStyle.personalInfo} ${mainStyle.subContentsCommon}`}>
@@ -96,7 +102,7 @@ export default function Home() {
               <li className={mainStyle.info}>
                 <div className={mainStyle.itemWrap}>
                   <h3 className={mainStyle.itemTitle}>name</h3>
-                  <p className={mainStyle.name}>성주영(Jooyoung Sung)</p>
+                  <p className={mainStyle.name}>성주영 (Jooyoung Sung)</p>
                 </div>
                 <div className={mainStyle.itemWrap}>
                   <h3 className={mainStyle.itemTitle}>birth</h3>
@@ -104,10 +110,14 @@ export default function Home() {
                 </div>
               </li>
       
-              <li className={mainStyle.contact}>
+              <li className={mainStyle.info}>
                 <div className={mainStyle.itemWrap}>
                   <h3 className={mainStyle.itemTitle}>contact</h3>
-                  <p className={mainStyle.email}>0125sjy@gmail.com</p>
+                  <p className={mainStyle.email}>
+                    0125sjy@gmail.com 
+                    {/* <span className={mainStyle.copy}></span> */}
+                  </p>
+                 
                 </div>
                 <div className={mainStyle.itemWrap}>
                   <h3 className={mainStyle.itemTitle}>channel</h3>
@@ -157,8 +167,8 @@ export default function Home() {
       {/* 2. 기술 */}
       <section id="skills-section" className={mainStyle.skills}>
         <h2 className={mainStyle.sectionTitleWrap}>
-          <strong className={mainStyle.sectionTitle}>skills</strong>
           <em className={mainStyle.sectionSubtitle}>기술</em>
+          <strong className={mainStyle.sectionTitle}>skills</strong>
         </h2>
         <ul className={mainStyle.skillCardsWrap}>
           {
@@ -173,8 +183,8 @@ export default function Home() {
       {/* 3. 포트폴리오 */}
       <section id="portfolio-section" className={mainStyle.portfolio}>
         <h2 className={mainStyle.sectionTitleWrap}>
-          <strong className={mainStyle.sectionTitle}>portfolio</strong>
           <em className={mainStyle.sectionSubtitle}>포트폴리오</em>
+          <strong className={mainStyle.sectionTitle}>portfolio</strong>
         </h2>
         <div className={mainStyle.portfolioBtnGroup}>
           <div onClick={() => scrollToProject('team')} className={mainStyle.btnWrap}><button type="button">Team</button></div>
@@ -228,22 +238,22 @@ export default function Home() {
       {/* 4. 기타 경험 */}
       <section id="others-section" className={mainStyle.others}>
         <h2 className={mainStyle.sectionTitleWrap}>
-          <strong className={mainStyle.sectionTitle}>others</strong>
           <em className={mainStyle.sectionSubtitle}>기타 경험</em>
+          <strong className={mainStyle.sectionTitle}>others</strong>
         </h2>
         <ul className={mainStyle.othersItemsWrap}>
           <li className={mainStyle.othersItem}>
-            <h3 className={mainStyle.othersItemTitle}>기타 경험 1</h3>
+            <h3 className={mainStyle.othersItemTitle}>전산세무1급 자격증 취득과정 수료</h3>
             <div className={mainStyle.othersItemDescriptionsWrap}>
-                <p className={mainStyle.otherItemDate}>2024.01 ~ 2024.02</p>
-                <p className={mainStyle.otherItemDescription}>기타 경험 설명입니다. 이에 관한 간단한 내용을 작성합니다. 내용은 3~4줄 이내로 간단하게 작성하도록 합니다. 기타 경험 설명입니다. 이에 관한 간단한 내용을 작성합니다. 내용은 3~4줄 이내로 간단하게 작성하도록 합니다.</p>
+                <p className={mainStyle.otherItemDate}>2019.04 ~ 2019.06</p>
+                <p className={mainStyle.otherItemDescription}>회계 자격증을 취득하기 위해 전산세무 1급 자격증 취득과정에 등록해 2달의 과정을 수료했습니다. 회계, 세법 관련 지식을 공부해 수료 이후 전산세무 1급 자격증을 취득했고 관련된 재경관리사, TAT등의 자격증도 함께 취득할 수 있었습니다.</p>
             </div> 
           </li>
           <li className={mainStyle.othersItem}>
-            <h3 className={mainStyle.othersItemTitle}>기타 경험 2</h3>
+            <h3 className={mainStyle.othersItemTitle}>캐나다 워킹홀리데이</h3>
             <div className={mainStyle.othersItemDescriptionsWrap}>
-                <p className={mainStyle.otherItemDate}>2024.01 ~ 2024.02</p>
-                <p className={mainStyle.otherItemDescription}>기타 경험 설명입니다. 이에 관한 간단한 내용을 작성합니다. 내용은 3~4줄 이내로 간단하게 작성하도록 합니다. 줄 간격은 180%입니다. 기타 경험 설명입니다. 이에 관한 간단한 내용을 작성합니다. 내용은 3~4줄 이내로 간단하게 작성하도록 합니다. 기타 경험 설명입니다. 이에 관한 간단한 내용을 작성합니다. 내용은 3~4줄 이내로 간단하게 작성하도록 합니다.</p>
+                <p className={mainStyle.otherItemDate}>2017.12 ~ 2018.10</p>
+                <p className={mainStyle.otherItemDescription}>어학연수 및 해외 경험을 위해 캐나다 벤쿠버로 약 1년 간 워킹홀리데이를 다녀왔습니다. 현지 어학원에서 영어 공부를 하고 아르바이트를 하며 영어 실력을 크게 향상시킬 수 있었습니다. 또한 다양한 문화적 배경을 이해하는 데에도 많은 도움이 되었습니다.</p>
             </div> 
           </li>
         </ul>

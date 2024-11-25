@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import './reset.scss';
-@import './responsive.scss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Gothic&display=swap');
 
 body{
@@ -9,14 +8,13 @@ body{
         margin: 0 auto;
         position: fixed;
         background-color: #101F5A;
-        color: #F7F8FA;
         z-index: 99;
+    }
+    main{
         &.visual{
             background-color: #101F5A;
             color: #111111;
         }
-    }
-    main{
         max-width: inherit;
         width: 100%;
         
@@ -45,5 +43,4 @@ body{
         height: 100%;
         overflow: hidden;
     }
-
 }

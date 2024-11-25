@@ -27,11 +27,11 @@
             "type": "team",
             "thumbnail":"./imgs/daon_thumbnail_gif.gif",
             "title":"Daon",
-            "subtitle":"다온 펜션 리뉴얼",
+            "subtitle":"다온 리뉴얼",
             "date": ["2024.06.19", "2024.09.12"],
             "people":[{"name":"이한주", "role":"팀장, 디자인"},{"name":"성주영", "role":"리소스 수집"},{"name":"윤경빈", "role":"배포"},{"name":"이홍영", "role":"개발"},{"name":"허다영", "role":"기획"}],
             "techs":["./icons/tech/html5.svg", "./icons/tech/sass.svg","./icons/tech/javascript.svg", "./icons/tech/json.svg", "./icons/tech/github.svg"],
-            "summary": ["구형의 '다온 펜션' 사이트를 리뉴얼 했습니다.", "전반적으로 노후화된 기존의 '다온 펜션' 사이트를 리뉴얼한 프로젝트 입니다."],
+            "summary": ["구형의 '다온 펜션'을 반응형 웹사이트로 리뉴얼 했습니다.", "전반적으로 노후화된 기존의 '다온 펜션' 사이트를 리뉴얼한 프로젝트 입니다."],
             "github": "https://github.com/0011git/daon-sjy",
             "link": "https://qodql.github.io/daon/",
             "description": [ 
@@ -76,14 +76,14 @@
             "subtitle":"라임무비",
             "date": ["2024.09.11", "2024.11.21"],
             "people": [{"name":"성주영", "role":"1인 프로젝트"}],
-            "techs":["./icons/tech/react.svg", "./icons/tech/vercel.svg", "./icons/tech/swiper.svg", "./icons/tech/zustand.svg", "./icons/tech/axios.svg", "./icons/tech/postman.svg", "./icons/tech/sass.svg"],
+            "techs":["./icons/tech/react.svg", "./icons/tech/zustand.svg", "./icons/tech/swiper.svg", "./icons/tech/vercel.svg", "./icons/tech/axios.svg", "./icons/tech/postman.svg", "./icons/tech/sass.svg"],
             "summary": ["영화 정보 제공 사이트 LimeMovie입니다.", "TMDB API를 활용한 영화 정보 제공 사이트 라임무비입니다."],
             "github": "https://github.com/0011git/limemovie",
             "link": "https://limemovie.vercel.app/",
             "description": [ 
                 "리액트를 이용해 총 18일 간 제작했습니다. 2024.09.11 ~ 09.24에 구현, 약 2달 이후 2024.11.18 ~ 11.21에 리팩토링 작업을 진행했습니다. TMDB를 활용해 트렌디한 영화, 상영중, 장르별 등 다양한 영화 정보 및 영화 검색 기능을 제공하는 것을 목표로 합니다. 모든 화면은 PC기준으로 제작했습니다."
                 ,                             
-                "API는 공식문서, 공식 서포트 사이트, Postman 등을 분석 후 사용할 URL을 선정했습니다. 또한 수업 중 모든 학생들이 동일한 API를 사용해 프로젝트를 진행했기 때문에 분석 내용을 텍스트로 정리해 반 전체에 공유했습니다. 이미지와 영상 관련 데이터를 많이 제공했기 때문에 커스텀한 Swiper를 결합해 보다 화려하고 다양하게 화면에 출력할 수 있었습니다. 또한 리팩토링 시 비효율적인 폴더구조와 컴포넌트 구조, 레이아웃 변경, API함수 수정 등 전반적으로 코드를 개선하는 작업을 진행했습니다. 또한 검색 기능 외에 기타 미구현한 기능을 추가했습니다."
+                "API는 공식 문서, 공식 Support 사이트, Postman 등을 분석 후 사용할 URL을 선정했습니다. 또한 수업 중 모든 학생들이 동일한 API를 사용해 프로젝트를 진행했기 때문에 분석 내용을 텍스트로 정리해 반 전체에 공유했습니다. 이미지와 영상 관련 데이터를 많이 제공하기 때문에 커스텀한 Swiper를 결합해 보다 화려하고 다양하게 화면에 출력할 수 있었습니다. 또한 리팩토링 시 비효율적인 폴더구조와 컴포넌트 구조, 레이아웃 변경, API함수 수정 등 전반적으로 코드를 개선하는 작업을 진행했습니다. 또한 검색 기능 외에 기타 미구현한 기능을 추가했습니다."
                 ,                             
                 "보다 자세한 개발 상세 설명은 GitHub의 README를 통해 확인하실 수 있습니다."
             ],

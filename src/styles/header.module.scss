@@ -1,3 +1,5 @@
+@import './_responsive.scss';
+
 .headerWrap{
     max-width: 960px;
     width: 100%;
@@ -7,29 +9,87 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: inherit;
-    .linkLogo{
+    color: #F7F8FA;
+    .headerLogo{
+        cursor: pointer;
     }
     nav{
-        color: inherit;
+        color: #F7F8FA;
         ul{
             display: flex;
-            color: inherit;
+            color: #F7F8FA;
             li{
-                color: inherit;
+                color: #F7F8FA;
                 padding: 0 4px;
                 font-weight: 700;
                 cursor: pointer;
                 text-transform: capitalize;
-                transition: 0.3s ease;
+                transition: 0.3s;
                 &:not(:last-of-type){
                     margin-right: 48px;
                 }
                 &:hover {
                     transform: translateY(-2px);
-                    // text-decoration: underline;
                 }
             
+            }
+        }
+    }
+}
+
+@include responsive($tab-l){
+    .headerWrap{
+        nav{
+            ul{
+                li{
+                    &:not(:last-of-type){
+                        margin-right: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive($mo-l){
+    .headerWrap{
+        nav{
+            &::after {
+                width: 24px;
+                height: 24px;
+                display: block;
+                background: url('../../public/icons/burger.svg') center no-repeat;
+                content: '';
+                position: relative;
+                cursor: pointer;
+            }
+            &.show{
+                ul{
+                    display: block;
+                    display: flex;
+                }
+            }
+            ul{
+                width: 100%;
+                height: 40px;
+                padding: 0 20px;
+                margin: 0 auto;
+                display: none;
+                justify-content: space-between;
+                align-items: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #101F5A;
+                border-radius: 0 0 8px 8px;
+                
+                li{
+                    // margin: 0 auto;
+                    // transition: none;
+                    &:hover {
+                        transform: none;
+                    }
+                }
             }
         }
     }
