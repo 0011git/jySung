@@ -48,7 +48,7 @@ export default function Home() {
     const today = new Date();
     const todayYYYY: number = today.getFullYear();
     const todayDD: number = today.getDate();
-    const age: number = (todayDD - 25 >= 0) ? (todayYYYY - 1993) + 1 : (todayYYYY - 1993);
+    const age: number = (todayDD - 25 >= 0) ? (todayYYYY - 1993) : (todayYYYY - 1993) - 1;
     return age;
   }
   const age: number = getAge();
@@ -73,7 +73,7 @@ export default function Home() {
               <p>개발자의 핵심 역량이라고 생각합니다.</p>
             </div>
             <div className={mainStyle.snsWrap}>
-              <Link href="https://github.com/0011git" className={mainStyle.github}></Link>
+              <Link href="https://github.com/0011git" target="_blank" className={mainStyle.github}></Link>
             </div>
           </div>
           <div className={mainStyle.imgWrap} id="visualImg">
