@@ -243,13 +243,6 @@ export default function Home() {
         </h2>
         <ul className={mainStyle.othersItemsWrap}>
           <li className={mainStyle.othersItem}>
-            <h3 className={mainStyle.othersItemTitle}>전산세무1급 자격증 취득과정 수료</h3>
-            <div className={mainStyle.othersItemDescriptionsWrap}>
-                <p className={mainStyle.otherItemDate}>2019.04 ~ 2019.06</p>
-                <p className={mainStyle.otherItemDescription}>회계 자격증을 취득하기 위해 전산세무 1급 자격증 취득과정에 등록해 2달의 과정을 수료했습니다. 회계, 세법 관련 지식을 공부해 수료 이후 전산세무 1급 자격증을 취득했고 관련된 재경관리사, TAT등의 자격증도 함께 취득할 수 있었습니다.</p>
-            </div> 
-          </li>
-          <li className={mainStyle.othersItem}>
             <h3 className={mainStyle.othersItemTitle}>캐나다 워킹홀리데이</h3>
             <div className={mainStyle.othersItemDescriptionsWrap}>
                 <p className={mainStyle.otherItemDate}>2017.12 ~ 2018.10</p>
