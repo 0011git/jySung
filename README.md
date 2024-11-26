@@ -15,8 +15,9 @@
 ### 2. 목표
 - 프로필, 자기 소개 및 포트폴리오 전시
 
-### 3. 핵심 기능
-- 반응형(태블릿 라지, 태블릿 스몰, 모바일 라지, 모바일 스몰)
+### 3. 핵심 기능 및 특징
+- 반응형 (태블릿 라지, 태블릿 스몰, 모바일 라지, 모바일 스몰)
+- 원페이지
 
 ### 4. 주요 기술 스택
 - Next.js, Vercel, Typescript
@@ -35,17 +36,17 @@
  ┃ ┣ 📂icons			
  ┃ ┗ 📂imgs			
  ┣ 📂src			
- ┃ ┣ 📂app			        # 앱 라우터 방식 사용, 원페이지
+ ┃ ┣ 📂app             # 앱 라우터 방식 사용, 원페이지
  ┃ ┃ ┣ 📜favicon.ico			
  ┃ ┃ ┣ 📜layout.tsx			
  ┃ ┃ ┗ 📜page.tsx			
  ┃ ┣ 📂components			
- ┃ ┣ 📂data			      # 데이터 json화
+ ┃ ┣ 📂data	       # 데이터 json화
  ┃ ┃ ┣ 📜portfolio.json			
  ┃ ┃ ┗ 📜skills.json			
  ┃ ┣ 📂styles			
  ┃ ┣ 📂type			
- ┃ ┃ ┗ 📜types.ts			  # 타입 정의
+ ┃ ┃ ┗ 📜types.ts      # 타입 정의
  ┣ 📜.eslintrc.json			
  ┣ 📜.gitignore			
  ┣ 📜next-env.d.ts			
