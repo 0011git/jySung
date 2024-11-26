@@ -1,8 +1,6 @@
 ## 👋 jysung
 안녕하세요, 프론트엔드 개발자 성주영의 개인 포트폴리오 사이트 입니다.
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=Next.js&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=Vercel&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-CC6699?style=flat-square&logo=sass&logoColor=white)
-
 
 ## 🔗 배포 URL
 <https://jy-sung.vercel.app/>
@@ -19,8 +17,8 @@
 - 반응형 (태블릿 라지, 태블릿 스몰, 모바일 라지, 모바일 스몰)
 - 원페이지
 
-### 4. 주요 기술 스택
-- Next.js, Vercel, Typescript
+### 4. 기술 스택
+- ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=Next.js&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=Vercel&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-CC6699?style=flat-square&logo=sass&logoColor=white)
 
 ### 5. 기간 및 인원
 - 2024.11.12 ~ 2024.11.25(14일), 1인
